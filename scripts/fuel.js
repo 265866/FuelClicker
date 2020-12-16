@@ -5,7 +5,7 @@ function fuelClick() {
     console.log(fuel)
 }
 
-function lemath()
+function fuelcounterupdate()
 {    
     var stuff = document.getElementById('fuelcount');
     stuff.innerHTML = "fuel: " + fuel;
@@ -13,8 +13,8 @@ function lemath()
 
 function begin()
 {
-    lemath();
-    setTimeout(begin, 1000, window);
+    fuelcounterupdate();
+    setTimeout(begin, 10, window);
 }
 
 document.addEventListener('DOMContentLoaded', function () {    
