@@ -1,5 +1,6 @@
 var fuel = 0
 var fuelPerSecond = 0
+var pickaxes = 0
 var pickaxeCost = 50
 
 function begin()
@@ -27,11 +28,11 @@ function giveFuel() {
 
 function pickaxe() {
     if (fuel >= pickaxeCost) {
-        console.log("got into if statement")
         fuel = fuel - pickaxeCost;
         pickaxeCost = pickaxeCost * (130 / 100)
         fuelPerSecond = fuelPerSecond + 1
-        pickaxebutton.innerHTML = "Pickaxe: " + pickaxeCost
+        pickaxes = pickaxes + 1
+        pickaxebutton.innerHTML = 'Pickaxe: +1 FPS<br/>Cost: ' + pickaxeCost + '<br/>Obtained: ' + pickaxes
     }
     else {
         alert("You cannot afford this upgrade!")
