@@ -4,7 +4,7 @@ var fuelPerSecond = 0
 function begin()
 {
     updateCounters();
-    setTimeout(begin, 10, window);
+    giveFuel();
 }
 
 function fuelClick() {
@@ -17,6 +17,7 @@ function updateCounters() {
     fuelcount.innerHTML = "fuel: " + fuel;
     var fuelsecond = document.getElementById('fuelpersecond')
     fuelsecond.innerHTML = "Fuel per Second: " + fuelPerSecond
+    setTimeout(updateCounters, 10)
 }
 
 function giveFuel() {
