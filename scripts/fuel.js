@@ -1,19 +1,22 @@
 var fuel = 0
+var fuelPerSecond = 0
 
 function fuelClick() {
     fuel++
     console.log(fuel)
 }
 
-function fuelcounterupdate()
+function updateCounters()
 {    
-    var stuff = document.getElementById('fuelcount');
-    stuff.innerHTML = "fuel: " + fuel;
+    var fuelcount = document.getElementById('fuelcount');
+    fuelcount.innerHTML = "fuel: " + fuel;
+    var fuelsecond = document.getElementById('fuelpersecond')
+    fuelsecond.innerHTML = "Fuel per Second: " + fuelPerSecond
 }
 
 function begin()
 {
-    fuelcounterupdate();
+    updateCounters();
     setTimeout(begin, 10, window);
 }
 
