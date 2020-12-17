@@ -26,7 +26,9 @@ function giveFuel() {
 }
 
 function pickaxe() {
-    if(fuel => pickaxeCost) {
+    console.log("pickaxe")
+    if (fuel >= pickaxeCost) {
+        console.log("got into if statement")
         fuel - pickaxeCost;
         var pickaxeCost = (30 / 100) * pickaxeCost
         var fuelPerSecond = fuelPerSecond + 1
