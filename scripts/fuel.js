@@ -9,7 +9,6 @@ function begin()
 
 function fuelClick() {
     fuel++
-    console.log(fuel)
 }
 
 function updateCounters() {    
