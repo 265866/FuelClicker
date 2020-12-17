@@ -1,5 +1,6 @@
 var fuel = 0
 var fuelPerSecond = 0
+var pickaxeCost = 50
 
 function begin()
 {
@@ -22,6 +23,17 @@ function updateCounters() {
 function giveFuel() {
     fuel = fuel + fuelPerSecond
     setTimeout(giveFuel, 1000)
+}
+
+function pickaxe() {
+    if(fuel => pickaxeCost) {
+        fuel - pickaxeCost;
+        var pickaxeCost = (30 / 100) * pickaxeCost
+        var fuelPerSecond = fuelPerSecond + 1
+    }
+    else {
+        alert("You cannot afford this upgrade!")
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {    
