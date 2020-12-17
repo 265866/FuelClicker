@@ -26,7 +26,6 @@ function giveFuel() {
 }
 
 function pickaxe() {
-    console.log("pickaxe")
     if (fuel >= pickaxeCost) {
         console.log("got into if statement")
         fuel - pickaxeCost;
