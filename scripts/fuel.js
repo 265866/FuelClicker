@@ -63,7 +63,7 @@ function roundAll() {
     fuelTimeMachineCost = Math.round(fuelTimeMachine)
     fueltimemachinebutton.innerHTML = 'Time Machines: +1000 FPS<br/>Cost: ' + fuelTimeMachineCost + '<br/>Obtained: ' + fuelTimeMachine
     fuelTempleCost = Math.round(fuelTempleCost)
-    javascriptconsolebutton.innerHTML = 'Javascript Consoles: +5000 FPS<br/>Cost: ' + javasciptConsoleCost + '<br/>Obtained: ' + javascriptConsole
+    javascriptconsolebutton.innerHTML = 'Javascript Consoles: +5000 FPS<br/>Cost: ' + javascriptConsoleCost + '<br/>Obtained: ' + javascriptConsole
     setTimeout(roundAll, 10)
 }
 
