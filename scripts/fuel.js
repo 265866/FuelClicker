@@ -30,10 +30,16 @@ function begin() {
     giveFuel();
     roundAll();
     checkForAfford();
+    updateTitle();
 }
 
 function fuelClick() {
     fuel++
+}
+
+function updateTitle() {
+    document.title = fuel
+    setTimeout(updateTitle, 10)
 }
 
 function updateCounters() {
