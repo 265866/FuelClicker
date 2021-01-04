@@ -18,6 +18,8 @@ var fuelTimeMachine = 0
 var fuelTimeMachineCost = 12500
 var javascriptConsole = 0
 var javascriptConsoleCost = 50000
+var sellSound = new Audio('./sfx/SellSound.mp3')
+var click = new Audio('./sfx/click.mp3')
 
 //upgrade checklist:
 // create new variable
@@ -35,6 +37,7 @@ function begin() {
 
 function fuelClick() {
     fuel++
+    click.play()
 }
 
 function updateTitle() {
@@ -151,6 +154,7 @@ function pickaxe() {
         pickaxeCost = pickaxeCost * (130 / 100)
         fuelPerSecond = fuelPerSecond + 1
         pickaxes = pickaxes + 1
+        sellSound.play()
     } else {}
 }
 
@@ -160,6 +164,7 @@ function miner() {
         minerCost = minerCost * (130 / 100)
         fuelPerSecond = fuelPerSecond + 5
         miners = miners + 1
+        sellSound.play()
     } else {}
 }
 
@@ -169,6 +174,7 @@ function armyofminers() {
         armyOfMinerCost = armyOfMinerCost * (130 / 100)
         fuelPerSecond = fuelPerSecond + 20
         armyOfMiners = armyOfMiners + 1
+        sellSound.play()
     } else {}
 }
 
@@ -178,6 +184,7 @@ function fuelmine() {
         fuelMineCost = fuelMineCost * (130 / 100)
         fuelPerSecond = fuelPerSecond + 50
         fuelMines = fuelMines + 1
+        sellSound.play()
     } else {}
 }
 
@@ -187,6 +194,7 @@ function fuelfactory() {
         fuelFactoryCost = fuelFactoryCost * (130 / 100)
         fuelPerSecond = fuelPerSecond + 100
         fuelFactories = fuelFactories + 1
+        sellSound.play()
     } else {}
 }
 
@@ -196,6 +204,7 @@ function fuelbank() {
         fuelBankCost = fuelBankCost * (130 / 100)
         fuelPerSecond = fuelPerSecond + 200
         fuelBank = fuelBank + 1
+        sellSound.play()
     } else {}
 }
 
@@ -205,6 +214,7 @@ function fueltemple() {
         fuelTempleCost = fuelTempleCost * (130 / 100)
         fuelPerSecond = fuelPerSecond + 500
         fuelTemple = fuelTemple + 1
+        sellSound.play()
     } else {}
 }
 
@@ -214,6 +224,7 @@ function fueltimemachine() {
         fuelTimeMachineCost = fuelTimeMachineCost * (130 / 100)
         fuelPerSecond = fuelPerSecond + 1000
         fuelTimeMachine = fuelTimeMachine + 1
+        sellSound.play()
     } else {}
 }
 
@@ -223,6 +234,7 @@ function javascriptconsole() {
         javascriptConsoleCost = javascriptConsoleCost * (130 / 100)
         fuelPerSecond = fuelPerSecond + 5000
         javascriptConsole = javascriptConsole + 1
+        sellSound.play()
     } else {}
 }
 

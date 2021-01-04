@@ -6,8 +6,9 @@ body {
 
   .fuelimg {
     float: left;
-    padding-top: 15%;
-    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .btn-group {
