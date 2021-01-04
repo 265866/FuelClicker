@@ -28,11 +28,9 @@ var click = new Audio('./sfx/click.mp3')
 // add to function "checkForAfford"
 
 function begin() {
-    updateCounters();
+    updateStuff();
     giveFuel();
-    roundAll();
     checkForAfford();
-    updateTitle();
 }
 
 function fuelClick() {
@@ -40,40 +38,13 @@ function fuelClick() {
     click.play()
 }
 
-function updateTitle() {
-    document.title = "Fuel: " + fuel
-    setTimeout(updateTitle, 100)
-}
-
-function updateCounters() {
+function updateStuff() {
     var fuelcount = document.getElementById('fuelcount');
     fuelcount.innerHTML = "Fuel: " + fuel;
     var fuelsecond = document.getElementById('fuelpersecond')
     fuelsecond.innerHTML = "Fuel Per Second: " + fuelPerSecond
-    setTimeout(updateCounters, 100)
-}
-
-function roundAll() {
-    fuel = Math.round(fuel)
-    pickaxeCost = Math.round(pickaxeCost)
-    pickaxebutton.innerHTML = 'Pickaxe: +1 FPS<br/>Cost: ' + pickaxeCost + '<br/>Obtained: ' + pickaxes
-    minerCost = Math.round(minerCost)
-    minerbutton.innerHTML = 'Miner: +5 FPS<br/>Cost: ' + minerCost + '<br/>Obtained: ' + miners
-    armyOfMinerCost = Math.round(armyOfMinerCost)
-    armyofminersbutton.innerHTML = 'Armies Of Miners: +20 FPS<br/>Cost: ' + armyOfMinerCost + '<br/>Obtained: ' + armyOfMiners
-    fuelMineCost = Math.round(fuelMineCost)
-    fuelminebutton.innerHTML = 'Fuel Mines: +50 FPS<br/>Cost: ' + fuelMineCost + '<br/>Obtained: ' + fuelMines
-    fuelFactoryCost = Math.round(fuelFactoryCost)
-    fuelfactorybutton.innerHTML = 'Fuel Factories: +100 FPS<br/>Cost: ' + fuelFactoryCost + '<br/>Obtained: ' + fuelFactories
-    fuelBankCost = Math.round(fuelBankCost)
-    fuelbankbutton.innerHTML = 'Fuel Banks: +200 FPS<br/>Cost: ' + fuelBankCost + '<br/>Obtained: ' + fuelBank
-    fuelTempleCost = Math.round(fuelTempleCost)
-    fueltemplebutton.innerHTML = 'Fuel Temples: +500 FPS<br/>Cost: ' + fuelTempleCost + '<br/>Obtained: ' + fuelTemple
-    fuelTimeMachineCost = Math.round(fuelTimeMachineCost)
-    fueltimemachinebutton.innerHTML = 'Time Machines: +1000 FPS<br/>Cost: ' + fuelTimeMachineCost + '<br/>Obtained: ' + fuelTimeMachine
-    fuelTempleCost = Math.round(fuelTempleCost)
-    javascriptconsolebutton.innerHTML = 'Javascript Consoles: +5000 FPS<br/>Cost: ' + javascriptConsoleCost + '<br/>Obtained: ' + javascriptConsole
-    setTimeout(roundAll, 100)
+    document.title = "Fuel: " + fuel
+    setTimeout(updateStuff, 100)
 }
 
 function checkForAfford() {
@@ -155,6 +126,8 @@ function pickaxe() {
         fuelPerSecond = fuelPerSecond + 1
         pickaxes = pickaxes + 1
         sellSound.play()
+        pickaxeCost = Math.round(pickaxeCost)
+        pickaxebutton.innerHTML = 'Pickaxe: +1 FPS<br/>Cost: ' + pickaxeCost + '<br/>Obtained: ' + pickaxes
     } else {}
 }
 
@@ -165,6 +138,8 @@ function miner() {
         fuelPerSecond = fuelPerSecond + 5
         miners = miners + 1
         sellSound.play()
+        minerCost = Math.round(minerCost)
+        minerbutton.innerHTML = 'Miner: +5 FPS<br/>Cost: ' + minerCost + '<br/>Obtained: ' + miners
     } else {}
 }
 
@@ -175,6 +150,8 @@ function armyofminers() {
         fuelPerSecond = fuelPerSecond + 20
         armyOfMiners = armyOfMiners + 1
         sellSound.play()
+        armyOfMinerCost = Math.round(armyOfMinerCost)
+        armyofminersbutton.innerHTML = 'Armies Of Miners: +20 FPS<br/>Cost: ' + armyOfMinerCost + '<br/>Obtained: ' + armyOfMiners
     } else {}
 }
 
@@ -185,6 +162,8 @@ function fuelmine() {
         fuelPerSecond = fuelPerSecond + 50
         fuelMines = fuelMines + 1
         sellSound.play()
+        fuelMineCost = Math.round(fuelMineCost)
+        fuelminebutton.innerHTML = 'Fuel Mines: +50 FPS<br/>Cost: ' + fuelMineCost + '<br/>Obtained: ' + fuelMines
     } else {}
 }
 
@@ -195,6 +174,8 @@ function fuelfactory() {
         fuelPerSecond = fuelPerSecond + 100
         fuelFactories = fuelFactories + 1
         sellSound.play()
+        fuelFactoryCost = Math.round(fuelFactoryCost)
+        fuelfactorybutton.innerHTML = 'Fuel Factories: +100 FPS<br/>Cost: ' + fuelFactoryCost + '<br/>Obtained: ' + fuelFactories
     } else {}
 }
 
@@ -205,6 +186,8 @@ function fuelbank() {
         fuelPerSecond = fuelPerSecond + 200
         fuelBank = fuelBank + 1
         sellSound.play()
+        fuelBankCost = Math.round(fuelBankCost)
+        fuelbankbutton.innerHTML = 'Fuel Banks: +200 FPS<br/>Cost: ' + fuelBankCost + '<br/>Obtained: ' + fuelBank
     } else {}
 }
 
@@ -215,6 +198,8 @@ function fueltemple() {
         fuelPerSecond = fuelPerSecond + 500
         fuelTemple = fuelTemple + 1
         sellSound.play()
+        fuelTempleCost = Math.round(fuelTempleCost)
+        fueltemplebutton.innerHTML = 'Fuel Temples: +500 FPS<br/>Cost: ' + fuelTempleCost + '<br/>Obtained: ' + fuelTemple
     } else {}
 }
 
@@ -225,6 +210,8 @@ function fueltimemachine() {
         fuelPerSecond = fuelPerSecond + 1000
         fuelTimeMachine = fuelTimeMachine + 1
         sellSound.play()
+        fuelTimeMachineCost = Math.round(fuelTimeMachineCost)
+        fueltimemachinebutton.innerHTML = 'Time Machines: +1000 FPS<br/>Cost: ' + fuelTimeMachineCost + '<br/>Obtained: ' + fuelTimeMachine
     } else {}
 }
 
@@ -235,6 +222,8 @@ function javascriptconsole() {
         fuelPerSecond = fuelPerSecond + 5000
         javascriptConsole = javascriptConsole + 1
         sellSound.play()
+        fuelTempleCost = Math.round(fuelTempleCost)
+        javascriptconsolebutton.innerHTML = 'Javascript Consoles: +5000 FPS<br/>Cost: ' + javascriptConsoleCost + '<br/>Obtained: ' + javascriptConsole
     } else {}
 }
 
