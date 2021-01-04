@@ -15,9 +15,13 @@
     <script src="scripts/fuel.js"></script>
 </head>
 <body>
-    <div id="fuelcount"></div>
-    <div id="fuelpersecond"></div>
-    <img onclick="fuelClick()" class="fit-picture" src="images/Fuel.png" alt="Fuel_Sprite">
+    <div class="counters">
+        <div id="fuelcount"></div>
+        <div id="fuelpersecond"></div>
+    </div>
+    <div class="fuelimg">
+        <img onclick="fuelClick()" class="fit-picture" src="images/Fuel.png" alt="Fuel_Sprite">
+    </div>
     <div class="btn-group">
         <button id="pickaxebutton" onclick="pickaxe()">Pickaxe: +1 FPS<br/>Cost: 50<br/>Obtained: 0</button>
         <button id="minerbutton" onclick="miner()">Miner: +5 FPS<br/>Cost: 200<br/>Obtained: 0</button>

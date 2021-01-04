@@ -38,8 +38,8 @@ function fuelClick() {
 }
 
 function updateTitle() {
-    document.title = fuel
-    setTimeout(updateTitle, 10)
+    document.title = "Fuel: " + fuel
+    setTimeout(updateTitle, 100)
 }
 
 function updateCounters() {
@@ -47,7 +47,7 @@ function updateCounters() {
     fuelcount.innerHTML = "Fuel: " + fuel;
     var fuelsecond = document.getElementById('fuelpersecond')
     fuelsecond.innerHTML = "Fuel Per Second: " + fuelPerSecond
-    setTimeout(updateCounters, 10)
+    setTimeout(updateCounters, 100)
 }
 
 function roundAll() {
@@ -66,11 +66,11 @@ function roundAll() {
     fuelbankbutton.innerHTML = 'Fuel Banks: +200 FPS<br/>Cost: ' + fuelBankCost + '<br/>Obtained: ' + fuelBank
     fuelTempleCost = Math.round(fuelTempleCost)
     fueltemplebutton.innerHTML = 'Fuel Temples: +500 FPS<br/>Cost: ' + fuelTempleCost + '<br/>Obtained: ' + fuelTemple
-    fuelTimeMachineCost = Math.round(fuelTimeMachine)
+    fuelTimeMachineCost = Math.round(fuelTimeMachineCost)
     fueltimemachinebutton.innerHTML = 'Time Machines: +1000 FPS<br/>Cost: ' + fuelTimeMachineCost + '<br/>Obtained: ' + fuelTimeMachine
     fuelTempleCost = Math.round(fuelTempleCost)
     javascriptconsolebutton.innerHTML = 'Javascript Consoles: +5000 FPS<br/>Cost: ' + javascriptConsoleCost + '<br/>Obtained: ' + javascriptConsole
-    setTimeout(roundAll, 10)
+    setTimeout(roundAll, 100)
 }
 
 function checkForAfford() {
@@ -123,7 +123,7 @@ function checkForAfford() {
         document.getElementById("fueltemplebutton").style.opacity = '1'
         document.getElementById("fueltemplebutton").style.cursor = 'pointer'
     }
-    if (fuel < fuelTempleCost) {
+    if (fuel < fuelTimeMachineCost) {
         document.getElementById("fueltimemachinebutton").style.opacity = '0.6'
         document.getElementById("fueltimemachinebutton").style.cursor = 'not-allowed'
     } else {
@@ -213,14 +213,14 @@ function fueltimemachine() {
         fuel = fuel - fuelTimeMachineCost;
         fuelTimeMachineCost = fuelTimeMachineCost * (130 / 100)
         fuelPerSecond = fuelPerSecond + 1000
-        fuelTemple = fuelTemple + 1
+        fuelTimeMachine = fuelTimeMachine + 1
     } else {}
 }
 
 function javascriptconsole() {
     if (fuel >= javascriptConsoleCost) {
-        fuel = fuel - javasciptConsoleCost;
-        javascriptConsoleCost = javasciptConsoleCost * (130 / 100)
+        fuel = fuel - javascriptConsoleCost;
+        javascriptConsoleCost = javascriptConsoleCost * (130 / 100)
         fuelPerSecond = fuelPerSecond + 5000
         javascriptConsole = javascriptConsole + 1
     } else {}
