@@ -1,23 +1,23 @@
 var fuel = 0
 var fuelPerSecond = 0
 var pickaxes = 0
-var pickaxeCost = 50
+var pickaxeCost = 100
 var miners = 0
-var minerCost = 200
+var minerCost = 500
 var armyOfMiners = 0
-var armyOfMinerCost = 750
+var armyOfMinerCost = 2000
 var fuelMines = 0
-var fuelMineCost = 1250
+var fuelMineCost = 5000
 var fuelFactories = 0
-var fuelFactoryCost = 1750
+var fuelFactoryCost = 10000
 var fuelBank = 0
-var fuelBankCost = 2500
+var fuelBankCost = 20000
 var fuelTemple = 0
-var fuelTempleCost = 5000
+var fuelTempleCost = 50000
 var fuelTimeMachine = 0
-var fuelTimeMachineCost = 12500
+var fuelTimeMachineCost = 100000
 var javascriptConsole = 0
-var javascriptConsoleCost = 50000
+var javascriptConsoleCost = 500000
 var sellSound = new Audio('./sfx/SellSound.mp3')
 var click = new Audio('./sfx/click.mp3')
 
@@ -151,7 +151,7 @@ function giveFuel() {
 function pickaxe() {
     if (fuel >= pickaxeCost) {
         fuel = fuel - pickaxeCost;
-        pickaxeCost = pickaxeCost * (130 / 100)
+        pickaxeCost = pickaxeCost * (140 / 100)
         fuelPerSecond = fuelPerSecond + 1
         pickaxes = pickaxes + 1
         sellSound.play()
@@ -161,7 +161,7 @@ function pickaxe() {
 function miner() {
     if (fuel >= minerCost) {
         fuel = fuel - minerCost;
-        minerCost = minerCost * (130 / 100)
+        minerCost = minerCost * (140 / 100)
         fuelPerSecond = fuelPerSecond + 5
         miners = miners + 1
         sellSound.play()
@@ -171,7 +171,7 @@ function miner() {
 function armyofminers() {
     if (fuel >= armyOfMinerCost) {
         fuel = fuel - armyOfMinerCost;
-        armyOfMinerCost = armyOfMinerCost * (130 / 100)
+        armyOfMinerCost = armyOfMinerCost * (140 / 100)
         fuelPerSecond = fuelPerSecond + 20
         armyOfMiners = armyOfMiners + 1
         sellSound.play()
@@ -181,7 +181,7 @@ function armyofminers() {
 function fuelmine() {
     if (fuel >= armyOfMinerCost) {
         fuel = fuel - fuelMineCost;
-        fuelMineCost = fuelMineCost * (130 / 100)
+        fuelMineCost = fuelMineCost * (140 / 100)
         fuelPerSecond = fuelPerSecond + 50
         fuelMines = fuelMines + 1
         sellSound.play()
@@ -191,7 +191,7 @@ function fuelmine() {
 function fuelfactory() {
     if (fuel >= fuelFactoryCost) {
         fuel = fuel - fuelFactoryCost;
-        fuelFactoryCost = fuelFactoryCost * (130 / 100)
+        fuelFactoryCost = fuelFactoryCost * (140 / 100)
         fuelPerSecond = fuelPerSecond + 100
         fuelFactories = fuelFactories + 1
         sellSound.play()
@@ -201,7 +201,7 @@ function fuelfactory() {
 function fuelbank() {
     if (fuel >= fuelBankCost) {
         fuel = fuel - fuelBankCost;
-        fuelBankCost = fuelBankCost * (130 / 100)
+        fuelBankCost = fuelBankCost * (140 / 100)
         fuelPerSecond = fuelPerSecond + 200
         fuelBank = fuelBank + 1
         sellSound.play()
@@ -211,7 +211,7 @@ function fuelbank() {
 function fueltemple() {
     if (fuel >= fuelTempleCost) {
         fuel = fuel - fuelTempleCost;
-        fuelTempleCost = fuelTempleCost * (130 / 100)
+        fuelTempleCost = fuelTempleCost * (140 / 100)
         fuelPerSecond = fuelPerSecond + 500
         fuelTemple = fuelTemple + 1
         sellSound.play()
@@ -221,7 +221,7 @@ function fueltemple() {
 function fueltimemachine() {
     if (fuel >= fuelTimeMachineCost) {
         fuel = fuel - fuelTimeMachineCost;
-        fuelTimeMachineCost = fuelTimeMachineCost * (130 / 100)
+        fuelTimeMachineCost = fuelTimeMachineCost * (140 / 100)
         fuelPerSecond = fuelPerSecond + 1000
         fuelTimeMachine = fuelTimeMachine + 1
         sellSound.play()
@@ -231,7 +231,7 @@ function fueltimemachine() {
 function javascriptconsole() {
     if (fuel >= javascriptConsoleCost) {
         fuel = fuel - javascriptConsoleCost;
-        javascriptConsoleCost = javascriptConsoleCost * (130 / 100)
+        javascriptConsoleCost = javascriptConsoleCost * (140 / 100)
         fuelPerSecond = fuelPerSecond + 5000
         javascriptConsole = javascriptConsole + 1
         sellSound.play()
