@@ -339,10 +339,20 @@ function javascriptconsole() {
 }
 
 function startMusic() {
-
-    if (sound = true) {
-        
+    if (sound == true) {
+        sound = false
+        song1.pause()
+        song2.pause()
+        song3.pause()
+        song4.pause()
+        song5.pause()
+        song6.pause()
+        musicbutton.innerHTML = 'Play Music'
+        nowplaying.innerHTML = 'Now Playing: Nothing!'
     }
+    else {
+    musicbutton.innerHTML = 'Pause Music'
+    sound = true
     var x = Math.random()
     x = x * 10
     x = Math.round(x)
@@ -387,6 +397,11 @@ function startMusic() {
         song5.play()
         nowplaying.innerHTML = 'Now Playing: Aviscerall - Sanctuary'
     }
+    if (x == 10) {
+        song4.play()
+        nowplaying.innerHTML = 'Now Playing: Aviscerall - Coffee Shop'
+    }
+}
 }
 
 document.addEventListener('DOMContentLoaded', function() {
