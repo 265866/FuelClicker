@@ -1,47 +1,157 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	overflow: auto;
+	font-family: 'Poppins', sans-serif;
+}
+
+.intro {
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgb(32, 1, 48);
+	transition: 1s;
+}
+
 body {
-    background-image: url('../images/background.gif');
-    background-repeat: repeat;
-    background-size: cover;
-  }
+	background-color: rgb(32, 1, 48);
+	transform: translate3d(0px, 0px, 0px);
+	transition: all 700ms ease;
+}
 
-  .fuelimg {
-    float: left;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
+#svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: fill 0.7s ease forwards 6.5s;
+}
 
-  .btn-group {
-    float: right;
-  }
+#svg path:nth-child(1) {
+	stroke-dasharray: 508.55;
+	stroke-dashoffset: 508.55;
+	animation: line-anim 2s ease forwards;
+}
 
-  .btn-group button {
-    background-color: blue;
-    color: white;
-    padding: 10px 24px;
-    cursor: pointer;
-    width: 100%;
-    display: block;
-    border-radius: 8px;
-    outline: none;
-  }
-  
-  .btn-group button:not(:last-child) {
-    border-bottom: none;
-  }
-  
-  .btn-group button:hover {
-    background-color: purple ;
-  }
+#svg path:nth-child(2) {
+	stroke-dasharray: 297.21;
+	stroke-dashoffset: 297.21;
+	animation: line-anim 3s ease forwards;
+}
 
-  .counters {
-    color: blue;
-    background-color: blueviolet;
-    border: 5px solid black;
-    border-radius: 8px;
-    font-size: xx-large;
-    font-variant: normal;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    text-align: center
-  }
+#svg path:nth-child(3) {
+	stroke-dasharray: 226.94;
+	stroke-dashoffset: 226.94;
+	animation: line-anim 4s ease forwards;
+}
+
+#svg path:nth-child(4) {
+	stroke-dasharray: 508.55;
+	stroke-dashoffset: 508.55;
+	animation: line-anim 5s ease forwards;
+}
+
+#svg path:nth-child(5) {
+	stroke-dasharray: 512.35;
+	stroke-dashoffset: 512.35;
+	animation: line-anim 6s ease forwards;
+}
+
+#svg path:nth-child(6) {
+	stroke-dasharray: 463.96;
+	stroke-dashoffset: 463.96;
+	animation: line-anim 6s ease forwards;
+}
+
+#svg path:nth-child(7) {
+	stroke-dasharray: 549.06;
+	stroke-dashoffset: 549.06;
+	animation: line-anim 8s ease forwards;
+}
+
+@keyframes line-anim {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes fill {
+	from {
+		fill: transparent;
+	}
+	to {
+		fill: white;
+	}
+}
+
+.fuelimg {
+	float: left;
+	position: sticky;
+	top: 50%;
+	transform: translateY(-50%);
+	padding-left: 50px;
+	max-width: 150%;
+	height: auto;
+}
+
+.btn-group {
+  float: right;
+  border: none;
+  outline: none;
+}
+
+.btn-group button {
+	background-color: rgb(74, 1, 114);
+	color: white;
+	padding: 10px 24px;
+	cursor: pointer;
+	width: 100%;
+	display: block;
+	border-radius: 8px;
+	border: none;
+	outline: none;
+}
+
+.btn-group button:not(:last-child) {
+	border-bottom: none;
+}
+
+.btn-group button:hover {
+	background-color: rgb(51, 1, 77);
+}
+
+.counters {
+	color: white;
+	background-color: rgb(113, 43, 179);
+	border: 3px solid rgb(20, 1, 31);
+	border-radius: 8px;
+	font-size: xx-large;
+	font-variant: normal;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	text-align: center;
+	position: sticky;
+}
+
+#musicbutton {
+	background-color: rgb(74, 1, 114);
+	color: white;
+	cursor: pointer;
+	display: block;
+	border-radius: 8px;
+	border: none;
+	outline: none;
+	float: left;
+}
+
+#nowplaying {
+	color: white;
+	cursor: default;
+	display: block;
+	outline: none;
+	float: left;
+}
