@@ -21,11 +21,6 @@ var javascriptConsoleCost = 500000
 var sellSound = new Audio('./sfx/SellSound.mp3')
 var click = new Audio('./sfx/click.mp3')
 
-//upgrade checklist:
-// create new variable
-// make a new function for upgrade
-// add to function "roundAll()"
-// add to function "checkForAfford"
 
 function begin() {
     updateStuff();
