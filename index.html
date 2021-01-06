@@ -37,8 +37,10 @@
       <div class="fuelimg">
          <img onclick="fuelClick()" class="fit-picture" src="images/Fuel.png" alt="Fuel_Sprite">
       </div>
-      <div class="reset">
+      <div class="buttons">
          <button onclick="reset()" id="resetbutton">Reset Progress</button>
+         <button onclick="startMusic()" id="musicbutton">Music | Off</button>
+         <button onclick="startSfx()" id="sfxbutton">SFX | Off</button>
       </div>
       <div class="btn-group">
          <button id="fuelwizardbutton" onclick="fuelwizard()">Fuel Wizards: +750 FPS<br/>Cost: 75000<br/>Obtained: 0</button>
@@ -58,9 +60,10 @@
          <button id="fuelbankbutton" onclick="fuelbank()">Fuel Banks: +200 FPS<br/>Cost: 20000<br/>Obtained: 0</button>
          <button id="fueltemplebutton" onclick="fueltemple()">Fuel Temples: +500 FPS<br/>Cost: 50000<br/>Obtained: 0</button>
    </div>
-   <div class="music">
-      <button onclick="startMusic()" id="musicbutton">Play Music</button>
+   <div class="nowplayingdiv">
       <h4 id="nowplaying">Now Playing: Nothing!</h4>
    </div>
    </body>
 </html>
+
+<!--<h4 id="nowplaying">Now Playing: Nothing!</h4>-->
