@@ -464,51 +464,55 @@ function startMusic() {
     } else {
         musicbutton.innerHTML = 'Pause Music'
         sound = true
-        var x = Math.random()
-        x = x * 10
-        x = Math.round(x)
+        var x = Math.floor(Math.random() * 10)
         //console.log(x)
         if (x == 0) {
+            song0.currentTime = 0;
             song0.play()
             nowplaying.innerHTML = 'Now Playing: Astroblk - Nothing Really matters that much to me anymore'
         }
         if (x == 1) {
+            song1.currentTime = 0;
             song1.play()
             nowplaying.innerHTML = 'Now Playing: Astroblk - Vancouver'
         }
         if (x == 2) {
+            song2.currentTime = 0;
             song2.play()
             nowplaying.innerHTML = 'Now Playing: Aviscerall - Sanctuary'
         }
         if (x == 3) {
+            song3.currentTime = 0;
             song3.play()
             nowplaying.innerHTML = 'Now Playing: Aviscerall - Coffee Shop'
         }
         if (x == 4) {
+            song4.currentTime = 0;
             song4.play()
             nowplaying.innerHTML = 'Now Playing: Whatever You Want (feat. Astroblk)'
         }
         if (x == 5) {
+            song5.currentTime = 0;
             song5.play()
             nowplaying.innerHTML = "Now Playing: Iam6teen - i'm fine, just tired"
         }
         if (x == 6) {
+            song6.currentTime = 0;
             song6.play()
             nowplaying.innerHTML = 'Now Playing: Linearwave - blossoming #3'
         }
         if (x == 7) {
+            song7.currentTime = 0;
             song7.play()
             nowplaying.innerHTML = 'Now Playing: Tune in with Chewie - Night Sky'
         }
         if (x == 8) {
+            song8.currentTime = 0;
             song8.play()
             nowplaying.innerHTML = 'Now Playing: Tune in With Chewie - Sweet Lullaby'
         }
         if (x == 9) {
-            song9.play()
-            nowplaying.innerHTML = 'Now Playing: Astroblk - Geneva'
-        }
-        if (x == 10) {
+            song9.currentTime = 0;
             song9.play()
             nowplaying.innerHTML = 'Now Playing: Astroblk - Geneva'
         }
