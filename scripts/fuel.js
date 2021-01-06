@@ -634,56 +634,89 @@ function save() {
     localStorage.setItem('javascriptConsole', JSON.stringify(javascriptConsole));
     localStorage.setItem('javascriptConsoleCost', JSON.stringify(javascriptConsoleCost));
     localStorage.setItem('donetutorial', JSON.stringify(donetutorial));
-    setTimeout(save, 10000)
+    setTimeout(save, 20000)
 }
 
 // Load:
 function load() {
-    javascriptConsoleCost = JSON.parse(localStorage.getItem('javascriptConsoleCost'));
-    pickaxebutton.innerHTML = 'Pickaxe: +1 FPS<br/>Cost: ' + pickaxeCost + '<br/>Obtained: ' + pickaxes
-    minerbutton.innerHTML = 'Miner: +5 FPS<br/>Cost: ' + minerCost + '<br/>Obtained: ' + miners
-    armyofminersbutton.innerHTML = 'Armies Of Miners: +20 FPS<br/>Cost: ' + armyOfMinerCost + '<br/>Obtained: ' + armyOfMiners
-    fuelminebutton.innerHTML = 'Fuel Mines: +50 FPS<br/>Cost: ' + fuelMineCost + '<br/>Obtained: ' + fuelMines
-    fuelfactorybutton.innerHTML = 'Fuel Factories: +100 FPS<br/>Cost: ' + fuelFactoryCost + '<br/>Obtained: ' + fuelFactories
-    fuelbankbutton.innerHTML = 'Fuel Banks: +200 FPS<br/>Cost: ' + fuelBankCost + '<br/>Obtained: ' + fuelBank
-    fueltemplebutton.innerHTML = 'Fuel Temples: +500 FPS<br/>Cost: ' + fuelTempleCost + '<br/>Obtained: ' + fuelTemple
-    fuelwizardbutton.innerHTML = 'Fuel Wizards: +750 FPS<br/>Cost: ' + fuelWizardCost + '<br/>Obtained: ' + fuelWizard
-    fuelshipmentbutton.innerHTML = 'Fuel Shipment: +1000 FPS<br/>Cost: ' + fuelShipmentCost + '<br/>Obtained: ' + fuelShipment
-    fuelportalbutton.innerHTML = 'Fuel Portals: +5000 FPS<br/>Cost: ' + fuelPortalCost + '<br/>Obtained: ' + fuelPortal
-    fuellabbutton.innerHTML = 'Fuel Labs: +7500 FPS<br/>Cost: ' + fuelLabCost + '<br/>Obtained: ' + fuelLab
-    fueltimemachinebutton.innerHTML = 'Time Machines: +10000 FPS<br/>Cost: ' + fuelTimeMachineCost + '<br/>Obtained: ' + fuelTimeMachine
-    fuelprismbutton.innerHTML = 'Prisms: +15000 FPS<br/>Cost: ' + prismCost + '<br/>Obtained: ' + prism
-    javascriptconsolebutton.innerHTML = 'Javascript Consoles: +5000 FPS<br/>Cost: ' + javascriptConsoleCost + '<br/>Obtained: ' + javascriptConsole
-    donetutorial = JSON.parse(localStorage.getItem('donetutorial'));
-    fuel = JSON.parse(localStorage.getItem('fuel'));
-    fuelPerSecond = JSON.parse(localStorage.getItem('fuelPerSecond'));
-    pickaxes = JSON.parse(localStorage.getItem('pickaxes'));
-    pickaxeCost = JSON.parse(localStorage.getItem('pickaxeCost'));
-    miners = JSON.parse(localStorage.getItem('miners'));
-    minerCost = JSON.parse(localStorage.getItem('minerCost'));
-    armyOfMiners = JSON.parse(localStorage.getItem('armyOfMiners'));
-    armyOfMinerCost = JSON.parse(localStorage.getItem('armyOfMinerCost'));
-    fuelMines = JSON.parse(localStorage.getItem('fuelMines'));
-    fuelMineCost = JSON.parse(localStorage.getItem('fuelMineCost'));
-    fuelFactories = JSON.parse(localStorage.getItem('fuelFactories'));
-    fuelFactoryCost = JSON.parse(localStorage.getItem('fuelFactoryCost'));
-    fuelBank = JSON.parse(localStorage.getItem('fuelBank'));
-    fuelBankCost = JSON.parse(localStorage.getItem('fuelBankCost'));
-    fuelTemple = JSON.parse(localStorage.getItem('fuelTemple'));
-    fuelTempleCost = JSON.parse(localStorage.getItem('fuelTempleCost'));
-    fuelWizard = JSON.parse(localStorage.getItem('fuelWizard'));
-    fuelWizardCost = JSON.parse(localStorage.getItem('fuelWizardCost'));
-    fuelShipment = JSON.parse(localStorage.getItem('fuelShipment'));
-    fuelShipmentCost = JSON.parse(localStorage.getItem('fuelShipmentCost'));
-    fuelPortal = JSON.parse(localStorage.getItem('fuelPortal'));
-    fuelPortalCost = JSON.parse(localStorage.getItem('fuelPortalCost'));
-    fuelLab = JSON.parse(localStorage.getItem('fuelLab'));
-    fuelLabCost = JSON.parse(localStorage.getItem('fuelLabCost'));
-    fuelTimeMachine = JSON.parse(localStorage.getItem('fuelTimeMachine'));
-    fuelTimeMachineCost = JSON.parse(localStorage.getItem('fuelTimeMachineCost'));
-    prism = JSON.parse(localStorage.getItem('prism'));
-    prismCost = JSON.parse(localStorage.getItem('prismCost'));
-    javascriptConsole = JSON.parse(localStorage.getItem('javascriptConsole'));
+    if (localStorage.getItem("pickaxeCost") === null) {
+        fuel = 0
+        fuelPerSecond = 0
+        pickaxes = 0
+        pickaxeCost = 100
+        miners = 0
+        minerCost = 500
+        armyOfMiners = 0
+        armyOfMinerCost = 2000
+        fuelMines = 0
+        fuelMineCost = 5000
+        fuelFactories = 0
+        fuelFactoryCost = 10000
+        fuelBank = 0
+        fuelBankCost = 20000
+        fuelTemple = 0
+        fuelTempleCost = 50000
+        fuelWizard = 0
+        fuelWizardCost = 75000
+        fuelShipment = 0
+        fuelShipmentCost = 1000000
+        fuelPortal = 0
+        fuelPortalCost = 500000
+        fuelLab = 0
+        fuelLabCost = 750000
+        fuelTimeMachine = 0
+        fuelTimeMachineCost = 1000000
+        prism = 0
+        prismCost = 1500000
+        javascriptConsole = 0
+        javascriptConsoleCost = 2500000
+        pickaxebutton.innerHTML = 'Pickaxe: +1 FPS<br/>Cost: ' + pickaxeCost + '<br/>Obtained: ' + pickaxes
+        minerbutton.innerHTML = 'Miner: +5 FPS<br/>Cost: ' + minerCost + '<br/>Obtained: ' + miners
+        armyofminersbutton.innerHTML = 'Armies Of Miners: +20 FPS<br/>Cost: ' + armyOfMinerCost + '<br/>Obtained: ' + armyOfMiners
+        fuelminebutton.innerHTML = 'Fuel Mines: +50 FPS<br/>Cost: ' + fuelMineCost + '<br/>Obtained: ' + fuelMines
+        fuelfactorybutton.innerHTML = 'Fuel Factories: +100 FPS<br/>Cost: ' + fuelFactoryCost + '<br/>Obtained: ' + fuelFactories
+        fuelbankbutton.innerHTML = 'Fuel Banks: +200 FPS<br/>Cost: ' + fuelBankCost + '<br/>Obtained: ' + fuelBank
+        fueltemplebutton.innerHTML = 'Fuel Temples: +500 FPS<br/>Cost: ' + fuelTempleCost + '<br/>Obtained: ' + fuelTemple
+        fuelwizardbutton.innerHTML = 'Fuel Wizards: +750 FPS<br/>Cost: ' + fuelWizardCost + '<br/>Obtained: ' + fuelWizard
+        fuelshipmentbutton.innerHTML = 'Fuel Shipment: +1000 FPS<br/>Cost: ' + fuelShipmentCost + '<br/>Obtained: ' + fuelShipment
+        fuelportalbutton.innerHTML = 'Fuel Portals: +5000 FPS<br/>Cost: ' + fuelPortalCost + '<br/>Obtained: ' + fuelPortal
+        fuellabbutton.innerHTML = 'Fuel Labs: +7500 FPS<br/>Cost: ' + fuelLabCost + '<br/>Obtained: ' + fuelLab
+        fueltimemachinebutton.innerHTML = 'Time Machines: +10000 FPS<br/>Cost: ' + fuelTimeMachineCost + '<br/>Obtained: ' + fuelTimeMachine
+        fuelprismbutton.innerHTML = 'Prisms: +15000 FPS<br/>Cost: ' + prismCost + '<br/>Obtained: ' + prism
+        javascriptconsolebutton.innerHTML = 'Javascript Consoles: +5000 FPS<br/>Cost: ' + javascriptConsoleCost + '<br/>Obtained: ' + javascriptConsole
+    } else {
+        donetutorial = JSON.parse(localStorage.getItem('donetutorial'));
+        fuel = JSON.parse(localStorage.getItem('fuel'));
+        fuelPerSecond = JSON.parse(localStorage.getItem('fuelPerSecond'));
+        pickaxes = JSON.parse(localStorage.getItem('pickaxes'));
+        pickaxeCost = JSON.parse(localStorage.getItem('pickaxeCost'));
+        miners = JSON.parse(localStorage.getItem('miners'));
+        minerCost = JSON.parse(localStorage.getItem('minerCost'));
+        armyOfMiners = JSON.parse(localStorage.getItem('armyOfMiners'));
+        armyOfMinerCost = JSON.parse(localStorage.getItem('armyOfMinerCost'));
+        fuelMines = JSON.parse(localStorage.getItem('fuelMines'));
+        fuelMineCost = JSON.parse(localStorage.getItem('fuelMineCost'));
+        fuelFactories = JSON.parse(localStorage.getItem('fuelFactories'));
+        fuelFactoryCost = JSON.parse(localStorage.getItem('fuelFactoryCost'));
+        fuelBank = JSON.parse(localStorage.getItem('fuelBank'));
+        fuelBankCost = JSON.parse(localStorage.getItem('fuelBankCost'));
+        fuelTemple = JSON.parse(localStorage.getItem('fuelTemple'));
+        fuelTempleCost = JSON.parse(localStorage.getItem('fuelTempleCost'));
+        fuelWizard = JSON.parse(localStorage.getItem('fuelWizard'));
+        fuelWizardCost = JSON.parse(localStorage.getItem('fuelWizardCost'));
+        fuelShipment = JSON.parse(localStorage.getItem('fuelShipment'));
+        fuelShipmentCost = JSON.parse(localStorage.getItem('fuelShipmentCost'));
+        fuelPortal = JSON.parse(localStorage.getItem('fuelPortal'));
+        fuelPortalCost = JSON.parse(localStorage.getItem('fuelPortalCost'));
+        fuelLab = JSON.parse(localStorage.getItem('fuelLab'));
+        fuelLabCost = JSON.parse(localStorage.getItem('fuelLabCost'));
+        fuelTimeMachine = JSON.parse(localStorage.getItem('fuelTimeMachine'));
+        fuelTimeMachineCost = JSON.parse(localStorage.getItem('fuelTimeMachineCost'));
+        prism = JSON.parse(localStorage.getItem('prism'));
+        prismCost = JSON.parse(localStorage.getItem('prismCost'));
+        javascriptConsole = JSON.parse(localStorage.getItem('javascriptConsole'));
+        javascriptConsoleCost = JSON.parse(localStorage.getItem('javascriptConsoleCost'));
+    }
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------
