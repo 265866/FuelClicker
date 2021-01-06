@@ -467,7 +467,7 @@ function startMusic() {
         var x = Math.random()
         x = x * 10
         x = Math.round(x)
-        console.log(x)
+        //console.log(x)
         if (x == 0) {
             song0.play()
             nowplaying.innerHTML = 'Now Playing: Astroblk - Nothing Really matters that much to me anymore'
@@ -517,61 +517,61 @@ function startMusic() {
 
 song0.addEventListener("ended", function() {
     sound = false
-    console.log('music has ended')
+    //console.log('music has ended')
     startMusic()
 })
 
 song1.addEventListener("ended", function() {
     sound = false
-    console.log('music has ended')
+    //console.log('music has ended')
     startMusic()
 })
 
 song2.addEventListener("ended", function() {
     sound = false
-    console.log('music has ended')
+    //console.log('music has ended')
     startMusic();
 })
 
 song3.addEventListener("ended", function() {
     sound = false
-    console.log('music has ended')
+    //console.log('music has ended')
     startMusic()
 })
 
 song4.addEventListener("ended", function() {
     sound = false
-    console.log('music has ended')
+    //console.log('music has ended')
     startMusic()
 })
 
 song5.addEventListener("ended", function() {
     sound = false
-    console.log('music has ended')
+    //console.log('music has ended')
     startMusic()
 })
 
 song6.addEventListener("ended", function() {
     sound = false
-    console.log('music has ended')
+    //console.log('music has ended')
     startMusic()
 })
 
 song7.addEventListener("ended", function() {
     sound = false
-    console.log('music has ended')
+    //console.log('music has ended')
     startMusic()
 })
 
 song8.addEventListener("ended", function() {
     sound = false
-    console.log('music has ended')
+    //console.log('music has ended')
     startMusic()
 })
 
 song9.addEventListener("ended", function() {
     sound = false
-    console.log('music has ended')
+    //console.log('music has ended')
     startMusic()
 })
 
