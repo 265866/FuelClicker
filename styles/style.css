@@ -2,7 +2,6 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	overflow: auto;
 	font-family: 'Poppins', sans-serif;
 }
 
@@ -89,13 +88,11 @@ body {
 }
 
 .fuelimg {
-	float: left;
-	position: sticky;
+	position: fixed;
 	top: 50%;
-	transform: translateY(-50%);
-	padding-left: 50px;
-	max-width: 150%;
-	height: auto;
+	left: 50%;
+	margin-top: 250px;
+	margin-left: -100px;
 }
 
 .btn-group {
@@ -154,4 +151,40 @@ body {
 	display: block;
 	outline: none;
 	float: left;
+}
+
+.music {
+	position: absolute;
+	height: 150vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	justify-content: center;
+	padding-left: 20px;
+}
+
+#resetbutton {
+	background-color: rgb(74, 1, 114);
+	color: white;
+	cursor: pointer;
+	display: block;
+	border-radius: 8px;
+	border: none;
+	outline: none;
+	float: left;
+	z-index:-1;
+	position:relative;
+}
+
+.reset {
+	background-color: rgb(74, 1, 114);
+	color: white;
+	cursor: pointer;
+	display: block;
+	border-radius: 8px;
+	border: none;
+	outline: none;
+	float: left;
+	z-index:-1;
+	position:relative;
 }

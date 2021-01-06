@@ -37,9 +37,17 @@
       <div class="fuelimg">
          <img onclick="fuelClick()" class="fit-picture" src="images/Fuel.png" alt="Fuel_Sprite">
       </div>
-      <div class="music">
-         <button onclick="startMusic()" id="musicbutton">Play Music</button>
-         <h4 id="nowplaying">Now Playing: Nothing!</h4>
+      <div class="reset">
+         <button onclick="reset()" id="resetbutton">Reset Progress</button>
+      </div>
+      <div class="btn-group">
+         <button id="fuelwizardbutton" onclick="fuelwizard()">Fuel Wizards: +750 FPS<br/>Cost: 75000<br/>Obtained: 0</button>
+         <button id="fuelshipmentbutton" onclick="fuelshipment()">Fuel Shipments: +1000 FPS<br/>Cost: 1000000<br/>Obtained: 0</button>
+         <button id="fuelportalbutton" onclick="fuelportal()">Fuel Portals: +5000 FPS<br/>Cost: 500000<br/>Obtained: 0</button>
+         <button id="fuellabbutton" onclick="fuellab()">Fuel Labs: +7500 FPS<br/>Cost: 750000<br/>Obtained: 0</button>
+         <button id="fueltimemachinebutton" onclick="fueltimemachine()">Time Machines: +10000 FPS<br/>Cost: 1000000<br/>Obtained: 0</button>
+         <button id="fuelprismbutton" onclick="fuelprism()">Prism: +15000 FPS<br/>Cost: 1500000<br/>Obtained: 0</button>
+         <button id="javascriptconsolebutton" onclick="javascriptconsole()">Javascript Console: +25000 FPS<br/>Cost: 2500000<br/>Obtained: 0</button>
       </div>
       <div class="btn-group">
          <button id="pickaxebutton" onclick="pickaxe()">Pickaxe: +1 FPS<br/>Cost: 100<br/>Obtained: 0</button>
@@ -49,8 +57,10 @@
          <button id="fuelfactorybutton" onclick="fuelfactory()">Fuel Factories: +100 FPS<br/>Cost: 10000<br/>Obtained: 0</button>
          <button id="fuelbankbutton" onclick="fuelbank()">Fuel Banks: +200 FPS<br/>Cost: 20000<br/>Obtained: 0</button>
          <button id="fueltemplebutton" onclick="fueltemple()">Fuel Temples: +500 FPS<br/>Cost: 50000<br/>Obtained: 0</button>
-         <button id="fueltimemachinebutton" onclick="fueltimemachine()">Time Machines: +1000 FPS<br/>Cost: 1000000<br/>Obtained: 0</button>
-         <button id="javascriptconsolebutton" onclick="javascriptconsole()">Javascript Console: +5000 FPS<br/>Cost: 500000<br/>Obtained: 0</button>
-      </div>
+   </div>
+   <div class="music">
+      <button onclick="startMusic()" id="musicbutton">Play Music</button>
+      <h4 id="nowplaying">Now Playing: Nothing!</h4>
+   </div>
    </body>
 </html>
