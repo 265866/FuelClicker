@@ -1,3 +1,4 @@
+/*All*/
 * {
 	padding: 0;
 	margin: 0;
@@ -5,6 +6,7 @@
 	font-family: 'Poppins', sans-serif;
 }
 
+/*Intro stuff*/
 .intro {
 	position: fixed;
 	z-index: 1;
@@ -14,12 +16,6 @@
 	height: 100vh;
 	background: rgb(32, 1, 48);
 	transition: 1s;
-}
-
-body {
-	background-color: rgb(32, 1, 48);
-	transform: translate3d(0px, 0px, 0px);
-	transition: all 700ms ease;
 }
 
 #svg {
@@ -87,14 +83,25 @@ body {
 	}
 }
 
+/*Body*/
+body {
+	background-color: rgb(32, 1, 48);
+	transform: translate3d(0px, 0px, 0px);
+	transition: all 700ms ease;
+	height: 100%;
+}
+
+/*Fuel Icon*/
 .fuelimg {
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	margin-top: 250px;
-	margin-left: -100px;
+	margin-top: 43vh;
+	margin-left: -10vh;
+	flex-direction: column;
 }
 
+/*Upgrade buttons*/
 .btn-group {
   float: right;
   border: none;
@@ -121,6 +128,7 @@ body {
 	background-color: rgb(51, 1, 77);
 }
 
+/*Top Counters*/
 .counters {
 	color: white;
 	background-color: rgb(113, 43, 179);
@@ -134,26 +142,7 @@ body {
 	position: sticky;
 }
 
-#nowplaying {
-	color: white;
-	cursor: default;
-	outline: none;
-	position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-.music {
-	position: absolute;
-	height: 150vh;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	justify-content: center;
-	padding-left: 20px;
-}
-
-
+/*Buttons*/
 .buttons {
 	border-radius: 8px;
 	border: none;
@@ -196,4 +185,15 @@ body {
 	display: block;
 	padding: 10px;
 	width: 150px;
+	margin-bottom: 65vh;
+}
+
+/*Now Playing*/
+
+#nowplaying {
+	color: white;
+	cursor: default;
+	outline: none;
+	position: absolute;
+	padding-left: 2vh;
 }
