@@ -1,8 +1,3 @@
-// Note for self tmrw -
-    // Ban function
-        //Make it just remove all elements
-        //Make it append something to dom saying "You Have Been Banned From Accessing This Resource"
-
 //Declares all variables
 
 var fuel = 0
