@@ -1,3 +1,8 @@
+// Note for self tmrw -
+    // Ban function
+        //Make it just remove all elements
+        //Make it append something to dom saying "You Have Been Banned From Accessing This Resource"
+
 //Declares all variables
 
 var fuel = 0
@@ -49,6 +54,7 @@ var song9 = new Audio('./music/Astroblk - Geneva.mp3')
 var sound = false
 var sfx = false
 var donetutorial = false
+var banned = false
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -64,13 +70,14 @@ var donetutorial = false
 
 // Function that happens on startup - Calls a bunch of other functions
 function begin() {
+    load();
+    checkForBan();
     tutorial();
     updateStuff();
     giveFuel();
     checkForAfford();
     cheatPrevention();
-    load();
-    save();
+    saveInterval();
     //svglength();
 }
 
@@ -111,32 +118,23 @@ function cheatPrevention() {
     console.log("Use the function 'ruinTheFun()' to unlock everything")
 }
 
-// If they run the function, resets all progress, then makes fun of the cheater
+// If they run the function, resets all progress, bans them from playing
 function ruinTheFun() {
-    console.log(".")
-    console.log(".")
-    console.log(".")
-    console.log("You actually expected that to work??")
-    console.log("Instead- we destroyed all of your work!")
-    console.log("Here are your new and improved stats!")
-    console.log(".")
-    resetNoConf()
-    console.log("Fuel: " + fuel)
-    console.log("Fuel Per Second: " + fuelPerSecond)
-    console.log("Pickaxes: " + pickaxes)
-    console.log("Miners: " + miners)
-    console.log("Army Of Miners: " + armyOfMiners)
-    console.log("Fuel Mines: " + fuelMines)
-    console.log("Fuel Factories: " + fuelFactories)
-    console.log("Fuel Banks: " + fuelBank)
-    console.log("Fuel Temples: " + fuelTemple)
-    console.log("Fuel Wizards: " + fuelWizard)
-    console.log("Fuel Shipments: " + fuelShipment)
-    console.log("Fuel Portals: " + fuelPortal)
-    console.log("Fuel Labs: " + fuelLab)
-    console.log("Fuel Time Machines: " + fuelTimeMachine)
-    console.log("Javascript Consoles: " + javascriptConsole)
-    return ("have fun :)")
+    banned = true
+    resetNoConf();
+    forceSave();
+    document.title = "Banned."
+    console.log("Banned.")
+    document.body.innerHTML = '';
+    return ("You have been banned from accessing Fuel Clicker -- Next time don't cheat.");
+}
+
+// Checks to see if user is banned
+function checkForBan() {
+    if (banned == true) {
+        ruinTheFun();
+    }
+    else {}
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
@@ -145,13 +143,13 @@ function ruinTheFun() {
 
 // Updates webpage title, fuel counter, fuel per second counter.
 function updateStuff() {
-    fuel = Math.round(fuel)
-    var fuelcount = document.getElementById('fuelcount');
-    fuelcount.innerHTML = "Fuel: " + fuel;
-    var fuelsecond = document.getElementById('fuelpersecond')
-    fuelsecond.innerHTML = "Fuel Per Second: " + fuelPerSecond
-    document.title = "Fuel: " + fuel
-    setTimeout(updateStuff, 100)
+        fuel = Math.round(fuel)
+        var fuelcount = document.getElementById('fuelcount');
+        fuelcount.innerHTML = "Fuel: " + fuel;
+        var fuelsecond = document.getElementById('fuelpersecond')
+        fuelsecond.innerHTML = "Fuel Per Second: " + fuelPerSecond
+        document.title = "Fuel: " + fuel
+        setTimeout(updateStuff, 100)
 }
 
 // Checks to see if you can afford the upgrades, depending on whether you can/cant, different css attributes are applied to the button
@@ -601,8 +599,8 @@ function cannotAffordSound() {
 
 // Progress Save/Load
 
-// Save:
-function save() {
+// Force Saves:
+function forceSave() {
     localStorage.setItem('fuel', JSON.stringify(fuel));
     localStorage.setItem('fuelPerSecond', JSON.stringify(fuelPerSecond));
     localStorage.setItem('pickaxes', JSON.stringify(pickaxes));
@@ -634,12 +632,49 @@ function save() {
     localStorage.setItem('javascriptConsole', JSON.stringify(javascriptConsole));
     localStorage.setItem('javascriptConsoleCost', JSON.stringify(javascriptConsoleCost));
     localStorage.setItem('donetutorial', JSON.stringify(donetutorial));
-    setTimeout(save, 20000)
+    localStorage.setItem('banned', JSON.stringify(banned));
+}
+
+// Saves every 20 seconds:
+function saveInterval() {
+    localStorage.setItem('fuel', JSON.stringify(fuel));
+    localStorage.setItem('fuelPerSecond', JSON.stringify(fuelPerSecond));
+    localStorage.setItem('pickaxes', JSON.stringify(pickaxes));
+    localStorage.setItem('pickaxeCost', JSON.stringify(pickaxeCost));
+    localStorage.setItem('miners', JSON.stringify(miners));
+    localStorage.setItem('minerCost', JSON.stringify(minerCost));
+    localStorage.setItem('armyOfMiners', JSON.stringify(armyOfMiners));
+    localStorage.setItem('armyOfMinerCost', JSON.stringify(armyOfMinerCost));
+    localStorage.setItem('fuelMines', JSON.stringify(fuelMines));
+    localStorage.setItem('fuelMineCost', JSON.stringify(fuelMineCost));
+    localStorage.setItem('fuelFactories', JSON.stringify(fuelFactories));
+    localStorage.setItem('fuelFactoryCost', JSON.stringify(fuelFactoryCost));
+    localStorage.setItem('fuelBank', JSON.stringify(fuelBank));
+    localStorage.setItem('fuelBankCost', JSON.stringify(fuelBankCost));
+    localStorage.setItem('fuelTemple', JSON.stringify(fuelTemple));
+    localStorage.setItem('fuelTempleCost', JSON.stringify(fuelTempleCost));
+    localStorage.setItem('fuelWizard', JSON.stringify(fuelWizard));
+    localStorage.setItem('fuelWizardCost', JSON.stringify(fuelWizardCost));
+    localStorage.setItem('fuelShipment', JSON.stringify(fuelShipment));
+    localStorage.setItem('fuelShipmentCost', JSON.stringify(fuelShipmentCost));
+    localStorage.setItem('fuelPortal', JSON.stringify(fuelPortal));
+    localStorage.setItem('fuelPortalCost', JSON.stringify(fuelPortalCost));
+    localStorage.setItem('fuelLab', JSON.stringify(fuelLab));
+    localStorage.setItem('fuelLabCost', JSON.stringify(fuelLabCost));
+    localStorage.setItem('fuelTimeMachine', JSON.stringify(fuelTimeMachine));
+    localStorage.setItem('fuelTimeMachineCost', JSON.stringify(fuelTimeMachineCost));
+    localStorage.setItem('prism', JSON.stringify(prism));
+    localStorage.setItem('prismCost', JSON.stringify(prismCost));
+    localStorage.setItem('javascriptConsole', JSON.stringify(javascriptConsole));
+    localStorage.setItem('javascriptConsoleCost', JSON.stringify(javascriptConsoleCost));
+    localStorage.setItem('donetutorial', JSON.stringify(donetutorial));
+    localStorage.setItem('banned', JSON.stringify(banned));
+    setTimeout(saveInterval, 20000)
 }
 
 // Load:
 function load() {
-    if (localStorage.getItem("pickaxeCost") === null) {
+    if (localStorage.getItem("pickaxeCost") == null) {
         fuel = 0
         fuelPerSecond = 0
         pickaxes = 0
@@ -670,6 +705,7 @@ function load() {
         prismCost = 1500000
         javascriptConsole = 0
         javascriptConsoleCost = 2500000
+        banned = false
         pickaxebutton.innerHTML = 'Pickaxe: +1 FPS<br/>Cost: ' + pickaxeCost + '<br/>Obtained: ' + pickaxes
         minerbutton.innerHTML = 'Miner: +5 FPS<br/>Cost: ' + minerCost + '<br/>Obtained: ' + miners
         armyofminersbutton.innerHTML = 'Armies Of Miners: +20 FPS<br/>Cost: ' + armyOfMinerCost + '<br/>Obtained: ' + armyOfMiners
@@ -716,6 +752,7 @@ function load() {
         prismCost = JSON.parse(localStorage.getItem('prismCost'));
         javascriptConsole = JSON.parse(localStorage.getItem('javascriptConsole'));
         javascriptConsoleCost = JSON.parse(localStorage.getItem('javascriptConsoleCost'));
+        banned = JSON.parse(localStorage.getItem('banned'));
     }
 }
 
@@ -874,6 +911,8 @@ function resetNoConf() {
     prismCost = 1500000
     javascriptConsole = 0
     javascriptConsoleCost = 2500000
+    // Force Saves
+    forceSave()
     // Pushes new changes to html
     pickaxebutton.innerHTML = 'Pickaxe: +1 FPS<br/>Cost: ' + pickaxeCost + '<br/>Obtained: ' + pickaxes
     minerbutton.innerHTML = 'Miner: +5 FPS<br/>Cost: ' + minerCost + '<br/>Obtained: ' + miners
