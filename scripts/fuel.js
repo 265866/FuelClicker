@@ -146,7 +146,7 @@ function updateStuff() {
     fuelcount.innerHTML = "Fuel: " + fuel;
     var fuelsecond = document.getElementById('fuelpersecond')
     fuelsecond.innerHTML = "Fuel Per Second: " + fuelPerSecond
-    document.title = "Fuel: " + fuel
+    document.title = fuel
     setTimeout(updateStuff, 100)
 }
 
@@ -318,7 +318,7 @@ function armyofminers() {
 
 // Fuel Mines
 function fuelmine() {
-    if (fuel >= armyOfMinerCost) {
+    if (fuel >= fuelMineCost) {
         fuel = fuel - fuelMineCost;
         fuelMineCost = Math.round(fuelMineCost * (200 / 100))
         fuelPerSecond = fuelPerSecond + 50
@@ -902,7 +902,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         setTimeout(() => {
             intro.style.top = '-100vh';
-        }, 8500)
+        }, 6500)
     })
 })
 

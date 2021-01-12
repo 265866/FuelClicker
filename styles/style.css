@@ -23,7 +23,7 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	animation: fill 0.7s ease forwards 6.5s;
+	animation: fill 0.7s ease forwards 5s;
 }
 
 #svg path:nth-child(1) {
@@ -35,37 +35,37 @@
 #svg path:nth-child(2) {
 	stroke-dasharray: 297.21;
 	stroke-dashoffset: 297.21;
-	animation: line-anim 3s ease forwards;
+	animation: line-anim 2.5s ease forwards;
 }
 
 #svg path:nth-child(3) {
 	stroke-dasharray: 226.94;
 	stroke-dashoffset: 226.94;
-	animation: line-anim 4s ease forwards;
+	animation: line-anim 3s ease forwards;
 }
 
 #svg path:nth-child(4) {
 	stroke-dasharray: 508.55;
 	stroke-dashoffset: 508.55;
-	animation: line-anim 5s ease forwards;
+	animation: line-anim 3.5s ease forwards;
 }
 
 #svg path:nth-child(5) {
 	stroke-dasharray: 512.35;
 	stroke-dashoffset: 512.35;
-	animation: line-anim 6s ease forwards;
+	animation: line-anim 4s ease forwards;
 }
 
 #svg path:nth-child(6) {
 	stroke-dasharray: 463.96;
 	stroke-dashoffset: 463.96;
-	animation: line-anim 6s ease forwards;
+	animation: line-anim 4.5s ease forwards;
 }
 
 #svg path:nth-child(7) {
 	stroke-dasharray: 549.06;
 	stroke-dashoffset: 549.06;
-	animation: line-anim 8s ease forwards;
+	animation: line-anim 5s ease forwards;
 }
 
 @keyframes line-anim {
