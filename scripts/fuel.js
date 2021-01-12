@@ -234,7 +234,7 @@ function checkForAfford() {
         document.getElementById("fueltimemachinebutton").style.opacity = '1'
         document.getElementById("fueltimemachinebutton").style.cursor = 'pointer'
     }
-    if (fuel < fuelLabCost) {
+    if (fuel < prismCost) {
         document.getElementById("fuelprismbutton").style.opacity = '0.6'
         document.getElementById("fuelprismbutton").style.cursor = 'not-allowed'
     } else {
@@ -458,7 +458,7 @@ function javascriptconsole() {
         javascriptConsoleCost = Math.round(javascriptConsoleCost * (200 / 100))
         fuelPerSecond = fuelPerSecond + 25000
         javascriptConsole++
-        javascriptconsolebutton.innerHTML = 'Javascript Consoles: +5000 FPS<br/>Cost: ' + javascriptConsoleCost + '<br/>Obtained: ' + javascriptConsole
+        javascriptconsolebutton.innerHTML = 'Javascript Consoles: +25000 FPS<br/>Cost: ' + javascriptConsoleCost + '<br/>Obtained: ' + javascriptConsole
         sellingSound();
     } else {
         cannotAffordSound();
@@ -658,7 +658,7 @@ function load() {
         fuellabbutton.innerHTML = 'Fuel Labs: +7500 FPS<br/>Cost: ' + fuelLabCost + '<br/>Obtained: ' + fuelLab
         fueltimemachinebutton.innerHTML = 'Time Machines: +10000 FPS<br/>Cost: ' + fuelTimeMachineCost + '<br/>Obtained: ' + fuelTimeMachine
         fuelprismbutton.innerHTML = 'Prisms: +15000 FPS<br/>Cost: ' + prismCost + '<br/>Obtained: ' + prism
-        javascriptconsolebutton.innerHTML = 'Javascript Consoles: +5000 FPS<br/>Cost: ' + javascriptConsoleCost + '<br/>Obtained: ' + javascriptConsole
+        javascriptconsolebutton.innerHTML = 'Javascript Consoles: +25000 FPS<br/>Cost: ' + javascriptConsoleCost + '<br/>Obtained: ' + javascriptConsole
     } else {
         donetutorial = JSON.parse(localStorage.getItem('donetutorial'));
         fuel = JSON.parse(localStorage.getItem('fuel'));
@@ -705,7 +705,7 @@ function load() {
         fuellabbutton.innerHTML = 'Fuel Labs: +7500 FPS<br/>Cost: ' + fuelLabCost + '<br/>Obtained: ' + fuelLab
         fueltimemachinebutton.innerHTML = 'Time Machines: +10000 FPS<br/>Cost: ' + fuelTimeMachineCost + '<br/>Obtained: ' + fuelTimeMachine
         fuelprismbutton.innerHTML = 'Prisms: +15000 FPS<br/>Cost: ' + prismCost + '<br/>Obtained: ' + prism
-        javascriptconsolebutton.innerHTML = 'Javascript Consoles: +5000 FPS<br/>Cost: ' + javascriptConsoleCost + '<br/>Obtained: ' + javascriptConsole
+        javascriptconsolebutton.innerHTML = 'Javascript Consoles: +25000 FPS<br/>Cost: ' + javascriptConsoleCost + '<br/>Obtained: ' + javascriptConsole
     }
 }
 
@@ -794,7 +794,7 @@ function reset() {
         fuellabbutton.innerHTML = 'Fuel Labs: +7500 FPS<br/>Cost: ' + fuelLabCost + '<br/>Obtained: ' + fuelLab
         fueltimemachinebutton.innerHTML = 'Time Machines: +10000 FPS<br/>Cost: ' + fuelTimeMachineCost + '<br/>Obtained: ' + fuelTimeMachine
         fuelprismbutton.innerHTML = 'Prisms: +15000 FPS<br/>Cost: ' + prismCost + '<br/>Obtained: ' + prism
-        javascriptconsolebutton.innerHTML = 'Javascript Consoles: +5000 FPS<br/>Cost: ' + javascriptConsoleCost + '<br/>Obtained: ' + javascriptConsole
+        javascriptconsolebutton.innerHTML = 'Javascript Consoles: +25000 FPS<br/>Cost: ' + javascriptConsoleCost + '<br/>Obtained: ' + javascriptConsole
     }
 }
 
@@ -879,7 +879,7 @@ function resetNoConf() {
     fuellabbutton.innerHTML = 'Fuel Labs: +7500 FPS<br/>Cost: ' + fuelLabCost + '<br/>Obtained: ' + fuelLab
     fueltimemachinebutton.innerHTML = 'Time Machines: +10000 FPS<br/>Cost: ' + fuelTimeMachineCost + '<br/>Obtained: ' + fuelTimeMachine
     fuelprismbutton.innerHTML = 'Prisms: +15000 FPS<br/>Cost: ' + prismCost + '<br/>Obtained: ' + prism
-    javascriptconsolebutton.innerHTML = 'Javascript Consoles: +5000 FPS<br/>Cost: ' + javascriptConsoleCost + '<br/>Obtained: ' + javascriptConsole
+    javascriptconsolebutton.innerHTML = 'Javascript Consoles: +25000 FPS<br/>Cost: ' + javascriptConsoleCost + '<br/>Obtained: ' + javascriptConsole
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
