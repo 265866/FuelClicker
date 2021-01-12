@@ -77,7 +77,12 @@ function begin() {
 
 // Gives fuel when fuel icon is clicked
 function fuelClick() {
-    fuel++
+    if (fuelPerSecond >= 10) {
+        fuel = fuel + (fuelPerSecond/2)
+    }
+    else {
+        fuel++
+    }
     clickSound();
 }
 
