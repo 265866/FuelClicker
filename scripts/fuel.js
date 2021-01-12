@@ -270,7 +270,7 @@ function pickaxe() {
         // subtracts the cost of the upgrade
         fuel = fuel - pickaxeCost;
         // raises the price of the upgrade (rounded)
-        pickaxeCost = Math.round(pickaxeCost*(140 / 100))
+        pickaxeCost = Math.round(pickaxeCost*(200 / 100))
         // adds to fuel per second
         fuelPerSecond = fuelPerSecond + 1
         // adds 1 to the amount currently owned
@@ -289,7 +289,7 @@ function pickaxe() {
 function miner() {
     if (fuel >= minerCost) {
         fuel = fuel - minerCost;
-        minerCost = Math.round(minerCost*(140 / 100))
+        minerCost = Math.round(minerCost*(200 / 100))
         fuelPerSecond = fuelPerSecond + 5
         miners++
         minerbutton.innerHTML = 'Miner: +5 FPS<br/>Cost: ' + minerCost + '<br/>Obtained: ' + miners
@@ -303,7 +303,7 @@ function miner() {
 function armyofminers() {
     if (fuel >= armyOfMinerCost) {
         fuel = fuel - armyOfMinerCost;
-        armyOfMinerCost = Math.round(armyOfMinerCost*(140 / 100))
+        armyOfMinerCost = Math.round(armyOfMinerCost*(200 / 100))
         fuelPerSecond = fuelPerSecond + 20
         armyOfMiners++
         armyofminersbutton.innerHTML = 'Armies Of Miners: +20 FPS<br/>Cost: ' + armyOfMinerCost + '<br/>Obtained: ' + armyOfMiners
@@ -317,7 +317,7 @@ function armyofminers() {
 function fuelmine() {
     if (fuel >= armyOfMinerCost) {
         fuel = fuel - fuelMineCost;
-        fuelMineCost = Math.round(fuelMineCost*(140 / 100))
+        fuelMineCost = Math.round(fuelMineCost*(200 / 100))
         fuelPerSecond = fuelPerSecond + 50
         fuelMines++
         fuelminebutton.innerHTML = 'Fuel Mines: +50 FPS<br/>Cost: ' + fuelMineCost + '<br/>Obtained: ' + fuelMines
@@ -331,7 +331,7 @@ function fuelmine() {
 function fuelfactory() {
     if (fuel >= fuelFactoryCost) {
         fuel = fuel - fuelFactoryCost;
-        fuelFactoryCost = Math.round(fuelFactoryCost*(140 / 100))
+        fuelFactoryCost = Math.round(fuelFactoryCost*(200 / 100))
         fuelPerSecond = fuelPerSecond + 100
         fuelFactories++
         fuelfactorybutton.innerHTML = 'Fuel Factories: +100 FPS<br/>Cost: ' + fuelFactoryCost + '<br/>Obtained: ' + fuelFactories
@@ -345,7 +345,7 @@ function fuelfactory() {
 function fuelbank() {
     if (fuel >= fuelBankCost) {
         fuel = fuel - fuelBankCost;
-        fuelBankCost = Math.round(fuelBankCost*(140 / 100))
+        fuelBankCost = Math.round(fuelBankCost*(200 / 100))
         fuelPerSecond = fuelPerSecond + 200
         fuelBank++
         fuelbankbutton.innerHTML = 'Fuel Banks: +200 FPS<br/>Cost: ' + fuelBankCost + '<br/>Obtained: ' + fuelBank
@@ -359,7 +359,7 @@ function fuelbank() {
 function fueltemple() {
     if (fuel >= fuelTempleCost) {
         fuel = fuel - fuelTempleCost;
-        fuelTempleCost = Math.round(fuelTempleCost*(140 / 100))
+        fuelTempleCost = Math.round(fuelTempleCost*(200 / 100))
         fuelPerSecond = fuelPerSecond + 500
         fuelTemple++
         fueltemplebutton.innerHTML = 'Fuel Temples: +500 FPS<br/>Cost: ' + fuelTempleCost + '<br/>Obtained: ' + fuelTemple
@@ -373,7 +373,7 @@ function fueltemple() {
 function fuelwizard() {
     if (fuel >= fuelWizardCost) {
         fuel = fuel - fuelWizardCost;
-        fuelWizardCost = Math.round(fuelWizardCost*(140 / 100))
+        fuelWizardCost = Math.round(fuelWizardCost*(200 / 100))
         fuelPerSecond = fuelPerSecond + 750
         fuelWizard++
         fuelwizardbutton.innerHTML = 'Fuel Wizards: +750 FPS<br/>Cost: ' + fuelWizardCost + '<br/>Obtained: ' + fuelWizard
@@ -387,7 +387,7 @@ function fuelwizard() {
 function fuelshipment() {
     if (fuel >= fuelShipmentCost) {
         fuel = fuel - fuelShipmentCost;
-        fuelShipmentCost = Math.round(fuelShipmentCost*(140 / 100))
+        fuelShipmentCost = Math.round(fuelShipmentCost*(200 / 100))
         fuelPerSecond = fuelPerSecond + 1000
         fuelShipment++
         fuelshipmentbutton.innerHTML = 'Fuel Shipment: +1000 FPS<br/>Cost: ' + fuelShipmentCost + '<br/>Obtained: ' + fuelShipment
@@ -401,7 +401,7 @@ function fuelshipment() {
 function fuelportal() {
     if (fuel >= fuelPortalCost) {
         fuel = fuel - fuelPortalCost;
-        fuelPortalCost = Math.round(fuelPortalCost*(140 / 100))
+        fuelPortalCost = Math.round(fuelPortalCost*(200 / 100))
         fuelPerSecond = fuelPerSecond + 5000
         fuelPortal++
         fuelportalbutton.innerHTML = 'Fuel Portals: +5000 FPS<br/>Cost: ' + fuelPortalCost + '<br/>Obtained: ' + fuelPortal
@@ -415,7 +415,7 @@ function fuelportal() {
 function fuellab() {
     if (fuel >= fuelLabCost) {
         fuel = fuel - fuelLabCost;
-        fuelLabCost = Math.round(fuelLabCost*(140 / 100))
+        fuelLabCost = Math.round(fuelLabCost*(200 / 100))
         fuelPerSecond = fuelPerSecond + 7500
         fuelLab++
         fuellabbutton.innerHTML = 'Fuel Labs: +7500 FPS<br/>Cost: ' + fuelLabCost + '<br/>Obtained: ' + fuelLab
@@ -429,7 +429,7 @@ function fuellab() {
 function fueltimemachine() {
     if (fuel >= fuelTimeMachineCost) {
         fuel = fuel - fuelTimeMachineCost;
-        fuelTimeMachineCost = Math.round(fuelTimeMachineCost*(140 / 100))
+        fuelTimeMachineCost = Math.round(fuelTimeMachineCost*(200 / 100))
         fuelPerSecond = fuelPerSecond + 10000
         fuelTimeMachine++
         fueltimemachinebutton.innerHTML = 'Time Machines: +10000 FPS<br/>Cost: ' + fuelTimeMachineCost + '<br/>Obtained: ' + fuelTimeMachine
@@ -443,7 +443,7 @@ function fueltimemachine() {
 function fuelprism() {
     if (fuel >= prismCost) {
         fuel = fuel - prismCost;
-        prismCost = Math.round(prismCost*(140 / 100))
+        prismCost = Math.round(prismCost*(200 / 100))
         fuelPerSecond = fuelPerSecond + 15000
         prism++
         fuelprismbutton.innerHTML = 'Prisms: +15000 FPS<br/>Cost: ' + prismCost + '<br/>Obtained: ' + prism
@@ -457,7 +457,7 @@ function fuelprism() {
 function javascriptconsole() {
     if (fuel >= javascriptConsoleCost) {
         fuel = fuel - javascriptConsoleCost;
-        javascriptConsoleCost = Math.round(javascriptConsoleCost*(140 / 100))
+        javascriptConsoleCost = Math.round(javascriptConsoleCost*(200 / 100))
         fuelPerSecond = fuelPerSecond + 25000
         javascriptConsole++
         javascriptconsolebutton.innerHTML = 'Javascript Consoles: +5000 FPS<br/>Cost: ' + javascriptConsoleCost + '<br/>Obtained: ' + javascriptConsole
@@ -504,61 +504,9 @@ function startMusic() {
         ];
         musicbutton.innerHTML = 'Music | On'
         sound = true
-        var x = Math.floor(Math.random() * 10)
-        //console.log(x)
-        if (x == 0) {
-            // sets song to play from beginning
-            song0.currentTime = 0;
-            // starts song
-            song0.play()
-            // sets nowplaying element to say song name
-            nowplaying.innerHTML = 'Now Playing: Astroblk - Nothing Really matters that much to me anymore'
-        }
-        if (x == 1) {
-            song1.currentTime = 0;
-            song1.play()
-            nowplaying.innerHTML = 'Now Playing: Astroblk - Vancouver'
-        }
-        if (x == 2) {
-            song2.currentTime = 0;
-            song2.play()
-            nowplaying.innerHTML = 'Now Playing: Aviscerall - Sanctuary'
-        }
-        if (x == 3) {
-            song3.currentTime = 0;
-            song3.play()
-            nowplaying.innerHTML = 'Now Playing: Aviscerall - Coffee Shop'
-        }
-        if (x == 4) {
-            song4.currentTime = 0;
-            song4.play()
-            nowplaying.innerHTML = 'Now Playing: Whatever You Want (feat. Astroblk)'
-        }
-        if (x == 5) {
-            song5.currentTime = 0;
-            song5.play()
-            nowplaying.innerHTML = "Now Playing: Iam6teen - i'm fine, just tired"
-        }
-        if (x == 6) {
-            song6.currentTime = 0;
-            song6.play()
-            nowplaying.innerHTML = 'Now Playing: Linearwave - blossoming #3'
-        }
-        if (x == 7) {
-            song7.currentTime = 0;
-            song7.play()
-            nowplaying.innerHTML = 'Now Playing: Tune in with Chewie - Night Sky'
-        }
-        if (x == 8) {
-            song8.currentTime = 0;
-            song8.play()
-            nowplaying.innerHTML = 'Now Playing: Tune in With Chewie - Sweet Lullaby'
-        }
-        if (x == 9) {
-            song9.currentTime = 0;
-            song9.play()
-            nowplaying.innerHTML = 'Now Playing: Astroblk - Geneva'
-        }
+        var playing = songs[Math.floor(Math.random() * songs.length)]
+        console.log(playing)
+        playing.play()
     }
 }
 
@@ -1043,3 +991,59 @@ song9.addEventListener("ended", function() {
     //console.log('music has ended')
     startMusic()
 })
+
+
+/* if (x == 0) {
+    // sets song to play from beginning
+    song0.currentTime = 0;
+    // starts song
+    song0.play()
+    // sets nowplaying element to say song name
+    nowplaying.innerHTML = 'Now Playing: Astroblk - Nothing Really matters that much to me anymore'
+}
+if (x == 1) {
+    song1.currentTime = 0;
+    song1.play()
+    nowplaying.innerHTML = 'Now Playing: Astroblk - Vancouver'
+}
+if (x == 2) {
+    song2.currentTime = 0;
+    song2.play()
+    nowplaying.innerHTML = 'Now Playing: Aviscerall - Sanctuary'
+}
+if (x == 3) {
+    song3.currentTime = 0;
+    song3.play()
+    nowplaying.innerHTML = 'Now Playing: Aviscerall - Coffee Shop'
+}
+if (x == 4) {
+    song4.currentTime = 0;
+    song4.play()
+    nowplaying.innerHTML = 'Now Playing: Whatever You Want (feat. Astroblk)'
+}
+if (x == 5) {
+    song5.currentTime = 0;
+    song5.play()
+    nowplaying.innerHTML = "Now Playing: Iam6teen - i'm fine, just tired"
+}
+if (x == 6) {
+    song6.currentTime = 0;
+    song6.play()
+    nowplaying.innerHTML = 'Now Playing: Linearwave - blossoming #3'
+}
+if (x == 7) {
+    song7.currentTime = 0;
+    song7.play()
+    nowplaying.innerHTML = 'Now Playing: Tune in with Chewie - Night Sky'
+}
+if (x == 8) {
+    song8.currentTime = 0;
+    song8.play()
+    nowplaying.innerHTML = 'Now Playing: Tune in With Chewie - Sweet Lullaby'
+}
+if (x == 9) {
+    song9.currentTime = 0;
+    song9.play()
+    nowplaying.innerHTML = 'Now Playing: Astroblk - Geneva'
+}
+} */
