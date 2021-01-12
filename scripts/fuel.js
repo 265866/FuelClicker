@@ -1,5 +1,4 @@
 //Declares all variables
-
 var fuel = 0
 var fuelPerSecond = 0
 var pickaxes = 0
@@ -137,13 +136,13 @@ function checkForBan() {
 
 // Updates webpage title, fuel counter, fuel per second counter.
 function updateStuff() {
-        fuel = Math.round(fuel)
-        var fuelcount = document.getElementById('fuelcount');
-        fuelcount.innerHTML = "Fuel: " + fuel;
-        var fuelsecond = document.getElementById('fuelpersecond')
-        fuelsecond.innerHTML = "Fuel Per Second: " + fuelPerSecond
-        document.title = "Fuel: " + fuel
-        setTimeout(updateStuff, 100)
+    fuel = Math.round(fuel)
+    var fuelcount = document.getElementById('fuelcount');
+    fuelcount.innerHTML = "Fuel: " + fuel;
+    var fuelsecond = document.getElementById('fuelpersecond')
+    fuelsecond.innerHTML = "Fuel Per Second: " + fuelPerSecond
+    document.title = "Fuel: " + fuel
+    setTimeout(updateStuff, 100)
 }
 
 // Checks to see if you can afford the upgrades, depending on whether you can/cant, different css attributes are applied to the button
@@ -269,7 +268,7 @@ function pickaxe() {
         // subtracts the cost of the upgrade
         fuel = fuel - pickaxeCost;
         // raises the price of the upgrade (rounded)
-        pickaxeCost = Math.round(pickaxeCost*(200 / 100))
+        pickaxeCost = Math.round(pickaxeCost * (200 / 100))
         // adds to fuel per second
         fuelPerSecond = fuelPerSecond + 1
         // adds 1 to the amount currently owned
@@ -288,7 +287,7 @@ function pickaxe() {
 function miner() {
     if (fuel >= minerCost) {
         fuel = fuel - minerCost;
-        minerCost = Math.round(minerCost*(200 / 100))
+        minerCost = Math.round(minerCost * (200 / 100))
         fuelPerSecond = fuelPerSecond + 5
         miners++
         minerbutton.innerHTML = 'Miner: +5 FPS<br/>Cost: ' + minerCost + '<br/>Obtained: ' + miners
@@ -302,7 +301,7 @@ function miner() {
 function armyofminers() {
     if (fuel >= armyOfMinerCost) {
         fuel = fuel - armyOfMinerCost;
-        armyOfMinerCost = Math.round(armyOfMinerCost*(200 / 100))
+        armyOfMinerCost = Math.round(armyOfMinerCost * (200 / 100))
         fuelPerSecond = fuelPerSecond + 20
         armyOfMiners++
         armyofminersbutton.innerHTML = 'Armies Of Miners: +20 FPS<br/>Cost: ' + armyOfMinerCost + '<br/>Obtained: ' + armyOfMiners
@@ -316,7 +315,7 @@ function armyofminers() {
 function fuelmine() {
     if (fuel >= armyOfMinerCost) {
         fuel = fuel - fuelMineCost;
-        fuelMineCost = Math.round(fuelMineCost*(200 / 100))
+        fuelMineCost = Math.round(fuelMineCost * (200 / 100))
         fuelPerSecond = fuelPerSecond + 50
         fuelMines++
         fuelminebutton.innerHTML = 'Fuel Mines: +50 FPS<br/>Cost: ' + fuelMineCost + '<br/>Obtained: ' + fuelMines
@@ -330,12 +329,12 @@ function fuelmine() {
 function fuelfactory() {
     if (fuel >= fuelFactoryCost) {
         fuel = fuel - fuelFactoryCost;
-        fuelFactoryCost = Math.round(fuelFactoryCost*(200 / 100))
+        fuelFactoryCost = Math.round(fuelFactoryCost * (200 / 100))
         fuelPerSecond = fuelPerSecond + 100
         fuelFactories++
         fuelfactorybutton.innerHTML = 'Fuel Factories: +100 FPS<br/>Cost: ' + fuelFactoryCost + '<br/>Obtained: ' + fuelFactories
         sellingSound();
-    } else {    
+    } else {
         cannotAffordSound();
     }
 }
@@ -344,7 +343,7 @@ function fuelfactory() {
 function fuelbank() {
     if (fuel >= fuelBankCost) {
         fuel = fuel - fuelBankCost;
-        fuelBankCost = Math.round(fuelBankCost*(200 / 100))
+        fuelBankCost = Math.round(fuelBankCost * (200 / 100))
         fuelPerSecond = fuelPerSecond + 200
         fuelBank++
         fuelbankbutton.innerHTML = 'Fuel Banks: +200 FPS<br/>Cost: ' + fuelBankCost + '<br/>Obtained: ' + fuelBank
@@ -358,7 +357,7 @@ function fuelbank() {
 function fueltemple() {
     if (fuel >= fuelTempleCost) {
         fuel = fuel - fuelTempleCost;
-        fuelTempleCost = Math.round(fuelTempleCost*(200 / 100))
+        fuelTempleCost = Math.round(fuelTempleCost * (200 / 100))
         fuelPerSecond = fuelPerSecond + 500
         fuelTemple++
         fueltemplebutton.innerHTML = 'Fuel Temples: +500 FPS<br/>Cost: ' + fuelTempleCost + '<br/>Obtained: ' + fuelTemple
@@ -372,7 +371,7 @@ function fueltemple() {
 function fuelwizard() {
     if (fuel >= fuelWizardCost) {
         fuel = fuel - fuelWizardCost;
-        fuelWizardCost = Math.round(fuelWizardCost*(200 / 100))
+        fuelWizardCost = Math.round(fuelWizardCost * (200 / 100))
         fuelPerSecond = fuelPerSecond + 750
         fuelWizard++
         fuelwizardbutton.innerHTML = 'Fuel Wizards: +750 FPS<br/>Cost: ' + fuelWizardCost + '<br/>Obtained: ' + fuelWizard
@@ -386,7 +385,7 @@ function fuelwizard() {
 function fuelshipment() {
     if (fuel >= fuelShipmentCost) {
         fuel = fuel - fuelShipmentCost;
-        fuelShipmentCost = Math.round(fuelShipmentCost*(200 / 100))
+        fuelShipmentCost = Math.round(fuelShipmentCost * (200 / 100))
         fuelPerSecond = fuelPerSecond + 1000
         fuelShipment++
         fuelshipmentbutton.innerHTML = 'Fuel Shipment: +1000 FPS<br/>Cost: ' + fuelShipmentCost + '<br/>Obtained: ' + fuelShipment
@@ -400,7 +399,7 @@ function fuelshipment() {
 function fuelportal() {
     if (fuel >= fuelPortalCost) {
         fuel = fuel - fuelPortalCost;
-        fuelPortalCost = Math.round(fuelPortalCost*(200 / 100))
+        fuelPortalCost = Math.round(fuelPortalCost * (200 / 100))
         fuelPerSecond = fuelPerSecond + 5000
         fuelPortal++
         fuelportalbutton.innerHTML = 'Fuel Portals: +5000 FPS<br/>Cost: ' + fuelPortalCost + '<br/>Obtained: ' + fuelPortal
@@ -414,7 +413,7 @@ function fuelportal() {
 function fuellab() {
     if (fuel >= fuelLabCost) {
         fuel = fuel - fuelLabCost;
-        fuelLabCost = Math.round(fuelLabCost*(200 / 100))
+        fuelLabCost = Math.round(fuelLabCost * (200 / 100))
         fuelPerSecond = fuelPerSecond + 7500
         fuelLab++
         fuellabbutton.innerHTML = 'Fuel Labs: +7500 FPS<br/>Cost: ' + fuelLabCost + '<br/>Obtained: ' + fuelLab
@@ -428,7 +427,7 @@ function fuellab() {
 function fueltimemachine() {
     if (fuel >= fuelTimeMachineCost) {
         fuel = fuel - fuelTimeMachineCost;
-        fuelTimeMachineCost = Math.round(fuelTimeMachineCost*(200 / 100))
+        fuelTimeMachineCost = Math.round(fuelTimeMachineCost * (200 / 100))
         fuelPerSecond = fuelPerSecond + 10000
         fuelTimeMachine++
         fueltimemachinebutton.innerHTML = 'Time Machines: +10000 FPS<br/>Cost: ' + fuelTimeMachineCost + '<br/>Obtained: ' + fuelTimeMachine
@@ -442,7 +441,7 @@ function fueltimemachine() {
 function fuelprism() {
     if (fuel >= prismCost) {
         fuel = fuel - prismCost;
-        prismCost = Math.round(prismCost*(200 / 100))
+        prismCost = Math.round(prismCost * (200 / 100))
         fuelPerSecond = fuelPerSecond + 15000
         prism++
         fuelprismbutton.innerHTML = 'Prisms: +15000 FPS<br/>Cost: ' + prismCost + '<br/>Obtained: ' + prism
@@ -456,7 +455,7 @@ function fuelprism() {
 function javascriptconsole() {
     if (fuel >= javascriptConsoleCost) {
         fuel = fuel - javascriptConsoleCost;
-        javascriptConsoleCost = Math.round(javascriptConsoleCost*(200 / 100))
+        javascriptConsoleCost = Math.round(javascriptConsoleCost * (200 / 100))
         fuelPerSecond = fuelPerSecond + 25000
         javascriptConsole++
         javascriptconsolebutton.innerHTML = 'Javascript Consoles: +5000 FPS<br/>Cost: ' + javascriptConsoleCost + '<br/>Obtained: ' + javascriptConsole
@@ -494,6 +493,7 @@ function startMusic() {
         musicbutton.innerHTML = 'Music | On'
         sound = true
         var playing = songs[Math.floor(Math.random() * songs.length)]
+        playing.currentTime = 0
         playing.play()
     }
 }
@@ -504,11 +504,10 @@ function startMusic() {
 
 // Toggles SFX
 function startSfx() {
-    if(sfx == true) {
+    if (sfx == true) {
         sfx = false
         sfxbutton.innerHTML = 'SFX | Off'
-    }
-    else {
+    } else {
         sfx = true
         sfxbutton.innerHTML = 'SFX | On'
     }
@@ -516,21 +515,21 @@ function startSfx() {
 
 // Plays click sound dependent on whether SFX is toggled on or off
 function clickSound() {
-    if(sfx == true) {
+    if (sfx == true) {
         click.play()
     }
 }
 
 // Plays sell/buy sound dependent on whether SFX is toggled on or off
 function sellingSound() {
-    if(sfx == true) {
+    if (sfx == true) {
         sellSound.play()
     }
 }
 
 // Plays cannot afford sound dependent on whether SFX is toggled on or off
 function cannotAffordSound() {
-    if(sfx == true) {
+    if (sfx == true) {
         cantafford.play()
     }
 }
@@ -575,7 +574,7 @@ function forceSave() {
     localStorage.setItem('banned', JSON.stringify(banned));
 }
 
-// Saves every 20 seconds:
+// Saves every 5 seconds:
 function saveInterval() {
     localStorage.setItem('fuel', JSON.stringify(fuel));
     localStorage.setItem('fuelPerSecond', JSON.stringify(fuelPerSecond));
@@ -609,7 +608,7 @@ function saveInterval() {
     localStorage.setItem('javascriptConsoleCost', JSON.stringify(javascriptConsoleCost));
     localStorage.setItem('donetutorial', JSON.stringify(donetutorial));
     localStorage.setItem('banned', JSON.stringify(banned));
-    setTimeout(saveInterval, 20000)
+    setTimeout(saveInterval, 5000)
 }
 
 // Load:
@@ -887,13 +886,9 @@ function resetNoConf() {
 
 // Listeners
 
-// Waits for DOM to be loaded -- then starts beginning functions
-document.addEventListener('DOMContentLoaded', function() {
-    begin();
-});
-
 // Waits for DOM to be loaded -- does beginning "Clicker" animation
 document.addEventListener('DOMContentLoaded', () => {
+    begin();
     setTimeout(() => {
         logoSpan.forEach((span, idx) => {
             setTimeout(() => {
