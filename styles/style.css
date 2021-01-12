@@ -187,13 +187,3 @@ body {
 	width: 150px;
 	margin-bottom: 65vh;
 }
-
-/*Now Playing*/
-
-#nowplaying {
-	color: white;
-	cursor: default;
-	outline: none;
-	position: absolute;
-	padding-left: 2vh;
-}

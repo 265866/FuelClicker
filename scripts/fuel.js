@@ -93,7 +93,7 @@ function tutorial() {
                 alert("When you get to 100 fuel, click on the Pickaxe upgrade.")
                 alert("The goal of this game is to get as much fuel as possible.")
                 alert("Now that you've learned the basics, it's time for you to get started!")
-            } else {}
+            }
         } else {
             donetutorial = true
         }
@@ -129,7 +129,6 @@ function checkForBan() {
     if (banned == true) {
         ruinTheFun();
     }
-    else {}
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
@@ -277,7 +276,7 @@ function pickaxe() {
         pickaxes++
         // calls sellingSound function
         sellingSound();
-        // pushes new price to html
+        // pushes new price to DOM
         pickaxebutton.innerHTML = 'Pickaxe: +1 FPS<br/>Cost: ' + pickaxeCost + '<br/>Obtained: ' + pickaxes
     } else {
         // if the user cant afford the upgrade, it calls the cannotAffordSound function
@@ -487,25 +486,14 @@ function startMusic() {
         song8.pause()
         song9.pause()
         musicbutton.innerHTML = 'Music | Off'
-        nowplaying.innerHTML = 'Now Playing: Nothing!'
     } else {
         // if sound is false and the user clicks the sound toggle button, change button to say on, set sound to true, pick a random number 0-9, and play the corresponding song
         var songs = [
-            "song0",
-            "song1",
-            "song2",
-            "song3",
-            "song4",
-            "song5",
-            "song6",
-            "song7",
-            "song8",
-            "song9",
+            song0, song1, song2, song3, song4, song5, song6, song7, song8, song9,
         ];
         musicbutton.innerHTML = 'Music | On'
         sound = true
         var playing = songs[Math.floor(Math.random() * songs.length)]
-        console.log(playing)
         playing.play()
     }
 }
@@ -531,7 +519,6 @@ function clickSound() {
     if(sfx == true) {
         click.play()
     }
-    else{}
 }
 
 // Plays sell/buy sound dependent on whether SFX is toggled on or off
@@ -539,7 +526,6 @@ function sellingSound() {
     if(sfx == true) {
         sellSound.play()
     }
-    else{}
 }
 
 // Plays cannot afford sound dependent on whether SFX is toggled on or off
@@ -547,7 +533,6 @@ function cannotAffordSound() {
     if(sfx == true) {
         cantafford.play()
     }
-    else{}
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -796,7 +781,7 @@ function reset() {
         prismCost = 1500000
         javascriptConsole = 0
         javascriptConsoleCost = 2500000
-        // Pushes new changes to HTML
+        // Pushes new changes to DOM
         pickaxebutton.innerHTML = 'Pickaxe: +1 FPS<br/>Cost: ' + pickaxeCost + '<br/>Obtained: ' + pickaxes
         minerbutton.innerHTML = 'Miner: +5 FPS<br/>Cost: ' + minerCost + '<br/>Obtained: ' + miners
         armyofminersbutton.innerHTML = 'Armies Of Miners: +20 FPS<br/>Cost: ' + armyOfMinerCost + '<br/>Obtained: ' + armyOfMiners
@@ -812,7 +797,6 @@ function reset() {
         fuelprismbutton.innerHTML = 'Prisms: +15000 FPS<br/>Cost: ' + prismCost + '<br/>Obtained: ' + prism
         javascriptconsolebutton.innerHTML = 'Javascript Consoles: +5000 FPS<br/>Cost: ' + javascriptConsoleCost + '<br/>Obtained: ' + javascriptConsole
     }
-    else {}
 }
 
 // Resets all data (no confirmation)
@@ -882,7 +866,7 @@ function resetNoConf() {
     javascriptConsoleCost = 2500000
     // Force Saves
     forceSave()
-    // Pushes new changes to html
+    // Pushes new changes to DOM
     pickaxebutton.innerHTML = 'Pickaxe: +1 FPS<br/>Cost: ' + pickaxeCost + '<br/>Obtained: ' + pickaxes
     minerbutton.innerHTML = 'Miner: +5 FPS<br/>Cost: ' + minerCost + '<br/>Obtained: ' + miners
     armyofminersbutton.innerHTML = 'Armies Of Miners: +20 FPS<br/>Cost: ' + armyOfMinerCost + '<br/>Obtained: ' + armyOfMiners
@@ -991,59 +975,3 @@ song9.addEventListener("ended", function() {
     //console.log('music has ended')
     startMusic()
 })
-
-
-/* if (x == 0) {
-    // sets song to play from beginning
-    song0.currentTime = 0;
-    // starts song
-    song0.play()
-    // sets nowplaying element to say song name
-    nowplaying.innerHTML = 'Now Playing: Astroblk - Nothing Really matters that much to me anymore'
-}
-if (x == 1) {
-    song1.currentTime = 0;
-    song1.play()
-    nowplaying.innerHTML = 'Now Playing: Astroblk - Vancouver'
-}
-if (x == 2) {
-    song2.currentTime = 0;
-    song2.play()
-    nowplaying.innerHTML = 'Now Playing: Aviscerall - Sanctuary'
-}
-if (x == 3) {
-    song3.currentTime = 0;
-    song3.play()
-    nowplaying.innerHTML = 'Now Playing: Aviscerall - Coffee Shop'
-}
-if (x == 4) {
-    song4.currentTime = 0;
-    song4.play()
-    nowplaying.innerHTML = 'Now Playing: Whatever You Want (feat. Astroblk)'
-}
-if (x == 5) {
-    song5.currentTime = 0;
-    song5.play()
-    nowplaying.innerHTML = "Now Playing: Iam6teen - i'm fine, just tired"
-}
-if (x == 6) {
-    song6.currentTime = 0;
-    song6.play()
-    nowplaying.innerHTML = 'Now Playing: Linearwave - blossoming #3'
-}
-if (x == 7) {
-    song7.currentTime = 0;
-    song7.play()
-    nowplaying.innerHTML = 'Now Playing: Tune in with Chewie - Night Sky'
-}
-if (x == 8) {
-    song8.currentTime = 0;
-    song8.play()
-    nowplaying.innerHTML = 'Now Playing: Tune in With Chewie - Sweet Lullaby'
-}
-if (x == 9) {
-    song9.currentTime = 0;
-    song9.play()
-    nowplaying.innerHTML = 'Now Playing: Astroblk - Geneva'
-}
-} */
