@@ -19,7 +19,7 @@ var fuelTempleCost = 50000
 var fuelWizard = 0
 var fuelWizardCost = 75000
 var fuelShipment = 0
-var fuelShipmentCost = 1000000
+var fuelShipmentCost = 100000
 var fuelPortal = 0
 var fuelPortalCost = 500000
 var fuelLab = 0
@@ -649,7 +649,7 @@ function load() {
         fuelWizard = 0
         fuelWizardCost = 75000
         fuelShipment = 0
-        fuelShipmentCost = 1000000
+        fuelShipmentCost = 100000
         fuelPortal = 0
         fuelPortalCost = 500000
         fuelLab = 0
@@ -785,7 +785,7 @@ function reset() {
         fuelWizard = 0
         fuelWizardCost = 75000
         fuelShipment = 0
-        fuelShipmentCost = 1000000
+        fuelShipmentCost = 100000
         fuelPortal = 0
         fuelPortalCost = 500000
         fuelLab = 0
@@ -869,7 +869,7 @@ function resetNoConf() {
     fuelWizard = 0
     fuelWizardCost = 75000
     fuelShipment = 0
-    fuelShipmentCost = 1000000
+    fuelShipmentCost = 100000
     fuelPortal = 0
     fuelPortalCost = 500000
     fuelLab = 0
