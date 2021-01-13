@@ -51,6 +51,7 @@ var donetutorial = false
 var banned = false
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
+//Matisse and Colton made this section
 
 // Other Random Stuff
 
@@ -105,7 +106,7 @@ function tutorial() {
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------------
-
+// Colton made this section
 // Cheat Prevention
 
 // Logs some stuff in console at the beginning
@@ -136,7 +137,7 @@ function checkForBan() {
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------
-
+// Colton Made this section
 // Repeating Functions
 
 // Updates webpage title, fuel counter, fuel per second counter.
@@ -263,7 +264,7 @@ function giveFuel() {
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------
-
+// Colton Made this section
 // Upgrades
 
 // Pickaxe
@@ -471,7 +472,7 @@ function javascriptconsole() {
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-
+// Colton made this section
 // Music
 
 // Plays/Stops music dependent on whether music is toggled on or off
@@ -504,6 +505,7 @@ function startMusic() {
 }
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------
+//Matisse made this section
 
 // SFX
 
@@ -540,7 +542,7 @@ function cannotAffordSound() {
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------
-
+// Matisse made this section
 // Progress Save/Load
 
 // Force Saves:
@@ -715,7 +717,7 @@ function load() {
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------
-
+// Colton Made this section
 // Resets
 
 // Resets all data (confirmation)
@@ -888,7 +890,7 @@ function resetNoConf() {
 }
 
 //-----------------------------------------------------------------------------------------------------------------------------------
-
+// Colton did animation -- Matisse made music checks
 // Listeners
 
 // Waits for DOM to be loaded -- does beginning "Clicker" animation
