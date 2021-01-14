@@ -472,7 +472,7 @@ function javascriptconsole() {
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Colton made this section
+// Colton & Matisse made this section
 // Music
 
 // Plays/Stops music dependent on whether music is toggled on or off
