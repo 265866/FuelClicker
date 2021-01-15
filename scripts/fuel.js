@@ -893,6 +893,7 @@ function resetNoConf() {
 // Colton did animation -- Matisse made music checks
 // Listeners
 
+// Modified code from https://www.youtube.com/watch?v=vJNVramny9k
 // Waits for DOM to be loaded -- does beginning "Clicker" animation
 document.addEventListener('DOMContentLoaded', () => {
     begin();
